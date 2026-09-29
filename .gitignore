@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Dados gerados pelo pipeline (reproduzíveis com `make pipeline`)
+data/processed/*
+data/analytics/*
+data/exports/*
+!data/**/.gitkeep

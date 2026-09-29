@@ -1,0 +1,381 @@
+nacao;campeonato;rodada;ano;dia;home;away;HGHT;AGHT;HGFT;AGFT;odd_home;odd_draw;odd_away;over25;endereco
+BRAZIL;SERIE B;ROUND 1;2023;14.04.2023;Guarani;Avai;1;0;4;1;2.1;2.88;3.89;2.56;https://www.flashscore.com/match/GIkSQfeT/#/match-summary
+BRAZIL;SERIE B;ROUND 1;2023;14.04.2023;Ituano;Ceara;1;0;2;0;2.7;2.98;2.66;2.28;https://www.flashscore.com/match/l6KtpIei/#/match-summary
+BRAZIL;SERIE B;ROUND 1;2023;15.04.2023;Vila Nova FC;Novorizontino;2;0;2;1;2.23;2.97;3.33;2.62;https://www.flashscore.com/match/MaSfME3p/#/match-summary
+BRAZIL;SERIE B;ROUND 1;2023;15.04.2023;Sampaio Correa;Atletico GO;1;2;3;3;2.55;2.91;2.84;2.43;https://www.flashscore.com/match/MeCgsGuA/#/match-summary
+BRAZIL;SERIE B;ROUND 1;2023;15.04.2023;Mirassol;Chapecoense-SC;0;0;1;0;2.16;2.97;3.47;2.45;https://www.flashscore.com/match/SdJpqxBc/#/match-summary
+BRAZIL;SERIE B;ROUND 1;2023;15.04.2023;Juventude;Botafogo SP;0;1;1;2;1.92;3.1;4.1;2.38;https://www.flashscore.com/match/GIBctzeG/#/match-summary
+BRAZIL;SERIE B;ROUND 1;2023;16.04.2023;Criciuma;Tombense;1;0;2;0;1.52;3.71;6.33;2.35;https://www.flashscore.com/match/0jRbLYIj/#/match-summary
+BRAZIL;SERIE B;ROUND 1;2023;16.04.2023;Londrina;ABC;0;0;1;0;2.27;2.94;3.28;2.6;https://www.flashscore.com/match/f9A1ufAM/#/match-summary
+BRAZIL;SERIE B;ROUND 1;2023;16.04.2023;Vitoria;Ponte Preta;2;0;3;0;2.42;3.02;2.92;2.35;https://www.flashscore.com/match/AL8krdQ3/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;21.04.2023;Atletico GO;CRB;2;0;2;1;1.74;3.41;4.67;2.26;https://www.flashscore.com/match/8GjxZimj/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;21.04.2023;Botafogo SP;Sampaio Correa;1;0;1;0;2.0;3.16;3.88;2.31;https://www.flashscore.com/match/OOYOdeuc/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;21.04.2023;Ponte Preta;Criciuma;1;2;1;2;2.55;2.93;2.92;2.58;https://www.flashscore.com/match/EgiYZXXq/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;22.04.2023;Tombense;Ituano;1;0;3;0;2.45;2.98;2.96;2.38;https://www.flashscore.com/match/pbPqhXgS/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;22.04.2023;Avai;Mirassol;0;0;1;0;2.38;2.96;3.07;2.35;https://www.flashscore.com/match/MJftYB2d/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;22.04.2023;Novorizontino;Juventude;1;0;1;0;2.12;2.98;3.66;2.35;https://www.flashscore.com/match/2FXSeFf3/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;22.04.2023;Ceara;Guarani;0;2;0;3;1.79;3.37;4.53;2.26;https://www.flashscore.com/match/lWVzfgPF/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;23.04.2023;Chapecoense-SC;Londrina;0;0;3;0;1.9;3.11;4.24;2.51;https://www.flashscore.com/match/WfLugDvM/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;23.04.2023;ABC;Vitoria;0;0;0;3;2.21;2.95;3.4;2.42;https://www.flashscore.com/match/2wCBmi2q/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;28.04.2023;Vitoria;Londrina;2;0;2;0;1.83;3.3;4.45;2.28;https://www.flashscore.com/match/W80E7CgF/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;28.04.2023;Criciuma;Avai;1;0;1;0;1.78;3.31;4.7;2.36;https://www.flashscore.com/match/xd4Opkn2/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;28.04.2023;Guarani;Ituano;1;0;1;0;1.85;3.27;4.2;2.35;https://www.flashscore.com/match/tUAFnBHk/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;29.04.2023;Sampaio Correa;Mirassol;0;1;1;3;2.26;3.01;3.22;2.22;https://www.flashscore.com/match/AaaI6W8L/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;29.04.2023;Chapecoense-SC;Ponte Preta;0;1;1;1;2.19;3.01;3.38;2.42;https://www.flashscore.com/match/vZ3M5jOR/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;29.04.2023;Botafogo SP;CRB;1;0;2;0;2.24;2.95;3.36;2.47;https://www.flashscore.com/match/jah69YO2/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;29.04.2023;Tombense;Atletico GO;0;1;1;1;2.34;3.12;3.0;2.18;https://www.flashscore.com/match/trjl1AWr/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;30.04.2023;Novorizontino;Sport Recife;0;0;0;0;1.72;3.48;4.63;2.24;https://www.flashscore.com/match/lpB98hv9/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;30.04.2023;ABC;Ceara;1;2;1;2;2.62;3.01;2.75;2.42;https://www.flashscore.com/match/O6ug0Uok/#/match-summary
+BRAZIL;SERIE B;ROUND 3;2023;30.04.2023;Vila Nova FC;Juventude;1;0;1;0;1.79;3.33;4.44;2.24;https://www.flashscore.com/match/b55KoVWe/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;01.05.2023;Londrina;Criciuma;1;1;1;1;3.12;2.89;2.42;2.49;https://www.flashscore.com/match/GK2Q01x0/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;02.05.2023;Ponte Preta;Botafogo SP;0;0;2;0;1.94;3.14;4.02;2.28;https://www.flashscore.com/match/xAqcal1e/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;02.05.2023;CRB;Sampaio Correa;0;0;0;0;1.77;3.46;4.48;2.05;https://www.flashscore.com/match/pf7UaLi6/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;02.05.2023;Atletico GO;Chapecoense-SC;1;0;2;1;1.66;3.49;5.14;2.17;https://www.flashscore.com/match/WWr1b8G1/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;03.05.2023;Mirassol;Novorizontino;0;1;0;2;2.1;3.02;3.56;2.29;https://www.flashscore.com/match/l6npLVNE/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;03.05.2023;Juventude;Guarani;1;0;1;0;2.26;3.01;3.2;2.26;https://www.flashscore.com/match/xU3M1sNg/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;03.05.2023;Ituano;ABC;2;0;3;0;2.2;2.98;3.38;2.59;https://www.flashscore.com/match/AFmtMB88/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;03.05.2023;Avai;Vila Nova FC;0;2;0;3;2.1;3.02;3.66;2.47;https://www.flashscore.com/match/ANs5cSV7/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;05.05.2023;Botafogo SP;Vitoria;0;1;0;3;2.3;2.89;3.31;2.64;https://www.flashscore.com/match/WnmPL2EP/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;06.05.2023;Criciuma;Ituano;0;0;2;1;1.78;3.3;4.57;2.26;https://www.flashscore.com/match/IqascJyP/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;06.05.2023;Tombense;Avai;0;1;0;1;1.99;3.15;3.84;2.32;https://www.flashscore.com/match/xlW7DvM5/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;06.05.2023;Sampaio Correa;Juventude;0;1;2;1;1.9;3.29;3.94;2.18;https://www.flashscore.com/match/UNSaF0ig/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;06.05.2023;Mirassol;Vila Nova FC;1;1;1;1;1.95;3.09;4.02;2.47;https://www.flashscore.com/match/YeZjHMMt/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;06.05.2023;CRB;ABC;0;0;1;1;1.71;3.36;5.08;2.36;https://www.flashscore.com/match/KCLCCbyC/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;06.05.2023;Chapecoense-SC;Novorizontino;1;1;1;1;2.39;2.98;3.06;2.37;https://www.flashscore.com/match/OpS3EK6a/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;07.05.2023;Ponte Preta;Ceara;0;0;0;0;2.4;2.99;2.99;2.29;https://www.flashscore.com/match/Op6Ybu7C/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;07.05.2023;Sport Recife;Guarani;2;0;2;0;1.55;3.6;6.05;2.19;https://www.flashscore.com/match/jXTeGtxm/#/match-summary
+BRAZIL;SERIE B;ROUND 5;2023;08.05.2023;Atletico GO;Londrina;1;0;2;1;1.52;3.83;5.91;1.96;https://www.flashscore.com/match/69ewbaMI/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;10.05.2023;Ceara;Vitoria;0;0;0;2;1.7;3.46;4.88;2.2;https://www.flashscore.com/match/f5EH2N7m/#/match-summary
+BRAZIL;SERIE B;ROUND 4;2023;10.05.2023;Sport Recife;Tombense;2;1;3;2;1.38;4.27;8.02;2.08;https://www.flashscore.com/match/t2AD33hs/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;12.05.2023;Vila Nova FC;Criciuma;0;0;0;0;2.35;2.94;3.22;2.53;https://www.flashscore.com/match/hvZJAx6O/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;12.05.2023;Avai;Chapecoense-SC;0;1;1;4;2.22;3.05;3.36;2.44;https://www.flashscore.com/match/WUXN9dLU/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;13.05.2023;Juventude;Mirassol;0;0;0;1;2.24;3.0;3.27;2.27;https://www.flashscore.com/match/2DrqB6H4/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;13.05.2023;Novorizontino;CRB;0;0;0;1;1.69;3.39;5.17;2.24;https://www.flashscore.com/match/COkWD8Xo/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;13.05.2023;Guarani;Sampaio Correa;2;0;2;0;1.82;3.28;4.42;2.18;https://www.flashscore.com/match/b3KGBIjI/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;13.05.2023;Ceara;Tombense;1;0;2;0;1.63;3.5;5.46;2.16;https://www.flashscore.com/match/pxlvCn2b/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;14.05.2023;Londrina;Ponte Preta;0;0;3;0;2.69;3.0;2.64;2.34;https://www.flashscore.com/match/t4smAQWA/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;14.05.2023;Vitoria;Atletico GO;0;2;2;3;1.86;3.25;4.17;2.13;https://www.flashscore.com/match/6okzDSnh/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;14.05.2023;ABC;Botafogo SP;1;2;1;2;2.13;2.93;3.63;2.6;https://www.flashscore.com/match/zRti9pnH/#/match-summary
+BRAZIL;SERIE B;ROUND 6;2023;14.05.2023;Ituano;Sport Recife;1;1;1;1;3.17;2.99;2.33;2.28;https://www.flashscore.com/match/bLoSElIu/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;19.05.2023;Tombense;Londrina;0;0;0;2;2.0;3.07;3.9;2.32;https://www.flashscore.com/match/SK5UM3GG/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;19.05.2023;Mirassol;Vitoria;1;0;2;0;2.22;3.03;3.29;2.2;https://www.flashscore.com/match/buEDQoHi/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;19.05.2023;Atletico GO;Avai;0;0;0;0;1.53;3.8;6.04;1.96;https://www.flashscore.com/match/UPZa7OGT/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;20.05.2023;Sport Recife;Botafogo SP;1;0;3;0;1.44;3.9;7.14;2.18;https://www.flashscore.com/match/t43IP5Wc/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;20.05.2023;Sampaio Correa;ABC;1;0;1;0;1.87;3.32;4.1;2.16;https://www.flashscore.com/match/f77MOPo4/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;20.05.2023;Ituano;Novorizontino;0;0;0;2;2.53;2.92;2.88;2.38;https://www.flashscore.com/match/KlF9RR1o/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;21.05.2023;Chapecoense-SC;Juventude;0;1;0;2;2.07;3.05;3.66;2.33;https://www.flashscore.com/match/lU6QNq1A/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;21.05.2023;Criciuma;Ceara;1;2;1;2;2.02;3.18;3.65;2.27;https://www.flashscore.com/match/WYLR2rPp/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;21.05.2023;Ponte Preta;Guarani;0;0;1;1;1.87;3.26;4.14;2.17;https://www.flashscore.com/match/n1pe841N/#/match-summary
+BRAZIL;SERIE B;ROUND 7;2023;21.05.2023;CRB;Vila Nova FC;0;2;0;3;2.28;2.78;3.38;2.67;https://www.flashscore.com/match/8WMRLNVM/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;23.05.2023;Botafogo SP;Mirassol;0;0;1;0;3.0;2.96;2.45;2.45;https://www.flashscore.com/match/KAjpv5oi/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;23.05.2023;Novorizontino;Avai;0;0;2;0;1.67;3.47;5.1;2.24;https://www.flashscore.com/match/b1klwP0c/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;23.05.2023;ABC;Tombense;0;0;1;0;2.3;3.01;3.22;2.33;https://www.flashscore.com/match/vXOXHEUl/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;24.05.2023;Vitoria;CRB;0;0;1;0;1.66;3.36;5.38;2.3;https://www.flashscore.com/match/SzfhxqG3/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;24.05.2023;Vila Nova FC;Ituano;1;0;1;0;1.71;3.22;5.29;2.47;https://www.flashscore.com/match/428cG1gp/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;24.05.2023;Londrina;Ceara;0;3;1;3;2.87;2.98;2.5;2.22;https://www.flashscore.com/match/pAPTIfFr/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;24.05.2023;Juventude;Atletico GO;2;0;3;0;2.08;3.15;3.45;2.15;https://www.flashscore.com/match/ljr1zNpG/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;24.05.2023;Guarani;Chapecoense-SC;3;1;3;3;1.87;3.26;4.16;2.25;https://www.flashscore.com/match/nNLVKsoT/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;24.05.2023;Sampaio Correa;Ponte Preta;0;0;0;0;2.14;2.98;3.5;2.26;https://www.flashscore.com/match/6Rhdy3V9/#/match-summary
+BRAZIL;SERIE B;ROUND 8;2023;24.05.2023;Criciuma;Sport Recife;1;0;1;0;2.36;2.9;3.19;2.52;https://www.flashscore.com/match/I5C1FL8j/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;27.05.2023;Ituano;Londrina;2;1;3;1;1.92;3.16;4.14;2.22;https://www.flashscore.com/match/Sh5Swdi8/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;27.05.2023;CRB;Juventude;0;2;1;2;2.37;3.02;3.02;2.38;https://www.flashscore.com/match/f9YFUiEf/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;27.05.2023;Avai;Vitoria;0;1;1;1;2.16;3.0;3.5;2.43;https://www.flashscore.com/match/EkHpFCE7/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;27.05.2023;Atletico GO;Botafogo SP;0;0;1;1;1.54;3.8;5.92;1.96;https://www.flashscore.com/match/zaItGha1/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;28.05.2023;Ponte Preta;Vila Nova FC;1;0;1;0;2.47;2.89;3.05;2.41;https://www.flashscore.com/match/INNyHYqe/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;28.05.2023;Mirassol;Criciuma;0;0;1;0;1.96;3.18;4.02;2.24;https://www.flashscore.com/match/td9WxG6E/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;28.05.2023;Ceara;Novorizontino;0;1;0;3;1.98;3.18;3.87;2.28;https://www.flashscore.com/match/2BcuyfyR/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;28.05.2023;Sport Recife;ABC;1;1;4;1;1.38;4.22;7.92;1.94;https://www.flashscore.com/match/OKbyxzMK/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;28.05.2023;Tombense;Guarani;0;1;1;1;2.12;3.1;3.42;2.27;https://www.flashscore.com/match/CpqBVXbl/#/match-summary
+BRAZIL;SERIE B;ROUND 9;2023;29.05.2023;Chapecoense-SC;Sampaio Correa;0;1;0;1;1.97;3.15;3.88;2.19;https://www.flashscore.com/match/Ygp7WDqr/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;02.06.2023;Ceara;Chapecoense-SC;1;0;2;0;1.57;3.74;5.94;2.09;https://www.flashscore.com/match/Qm9ppXDs/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;02.06.2023;Botafogo SP;Tombense;0;0;0;0;1.97;3.25;3.88;2.21;https://www.flashscore.com/match/IsKAjZzE/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;02.06.2023;Vitoria;Ituano;2;0;3;0;1.74;3.41;4.91;2.3;https://www.flashscore.com/match/jeIIlD5Q/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;02.06.2023;Criciuma;Atletico GO;0;0;3;0;2.03;3.05;3.96;2.52;https://www.flashscore.com/match/tQzSRkbD/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;03.06.2023;Juventude;Avai;2;1;3;2;1.65;3.51;5.54;2.28;https://www.flashscore.com/match/8CbkqiTm/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;03.06.2023;Mirassol;Ponte Preta;0;0;1;0;1.75;3.4;4.69;2.22;https://www.flashscore.com/match/dYIEkgjK/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;03.06.2023;ABC;Novorizontino;0;0;0;1;3.58;3.01;2.14;2.58;https://www.flashscore.com/match/Gx2csVc0/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;03.06.2023;Vila Nova FC;Sampaio Correa;1;0;3;0;1.72;3.33;5.1;2.33;https://www.flashscore.com/match/2ZyOSVr7/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;04.06.2023;Guarani;CRB;0;1;0;1;1.73;3.34;4.87;2.22;https://www.flashscore.com/match/8CxKTBT0/#/match-summary
+BRAZIL;SERIE B;ROUND 10;2023;04.06.2023;Londrina;Sport Recife;1;0;1;2;3.86;3.22;1.95;2.21;https://www.flashscore.com/match/n3cgrBrf/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;06.06.2023;Tombense;Vitoria;0;1;1;2;2.51;3.07;2.87;2.29;https://www.flashscore.com/match/Kp3SflSa/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;06.06.2023;Ponte Preta;ABC;0;0;0;0;1.55;3.66;6.54;2.26;https://www.flashscore.com/match/fT01tkD6/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;06.06.2023;Chapecoense-SC;Vila Nova FC;0;0;0;1;2.73;2.96;2.71;2.56;https://www.flashscore.com/match/6saOeUCg/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;06.06.2023;Botafogo SP;Ituano;0;0;0;2;1.93;3.2;4.01;2.42;https://www.flashscore.com/match/4brh3CKJ/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;06.06.2023;Atletico GO;Ceara;0;1;0;3;1.84;3.4;4.11;2.0;https://www.flashscore.com/match/xhj6u9SC/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;07.06.2023;Sport Recife;Avai;1;0;2;1;1.36;4.5;8.36;1.92;https://www.flashscore.com/match/YT0Gcjrs/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;07.06.2023;Sampaio Correa;Londrina;1;0;2;0;1.74;3.41;4.77;2.19;https://www.flashscore.com/match/CKaKdAcm/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;07.06.2023;Novorizontino;Guarani;0;0;1;0;1.67;3.49;5.04;2.2;https://www.flashscore.com/match/rksd2WZP/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;07.06.2023;CRB;Mirassol;1;0;2;0;3.16;2.94;2.34;2.49;https://www.flashscore.com/match/29hXg8s6/#/match-summary
+BRAZIL;SERIE B;ROUND 11;2023;08.06.2023;Criciuma;Juventude;0;0;0;1;1.92;3.22;4.0;2.32;https://www.flashscore.com/match/jefAvTsJ/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;09.06.2023;ABC;Chapecoense-SC;0;0;1;1;2.04;2.97;3.94;2.56;https://www.flashscore.com/match/lQGE6oRB/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;10.06.2023;Vila Nova FC;Guarani;0;0;0;0;1.75;3.36;4.72;2.2;https://www.flashscore.com/match/AZeuhnCI/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;10.06.2023;Novorizontino;Sampaio Correa;1;0;1;0;1.57;3.61;5.99;2.22;https://www.flashscore.com/match/QNPgB9Ct/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;10.06.2023;Ituano;Atletico GO;0;0;1;1;2.17;3.11;3.31;2.15;https://www.flashscore.com/match/jVYRFk4P/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;10.06.2023;Ceara;CRB;1;1;1;3;1.76;3.35;4.69;2.16;https://www.flashscore.com/match/byO19msg/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;11.06.2023;Ponte Preta;Sport Recife;1;1;1;1;3.58;2.97;2.16;2.3;https://www.flashscore.com/match/t0iygSdC/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;11.06.2023;Londrina;Mirassol;1;0;1;2;3.47;3.03;2.16;2.3;https://www.flashscore.com/match/f3HA7RB5/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;11.06.2023;Avai;Botafogo SP;1;0;1;1;1.92;3.12;4.16;2.36;https://www.flashscore.com/match/lQfqi6RO/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;11.06.2023;Vitoria;Criciuma;0;1;0;1;1.72;3.37;5.12;2.35;https://www.flashscore.com/match/KpPcATRn/#/match-summary
+BRAZIL;SERIE B;ROUND 12;2023;11.06.2023;Juventude;Tombense;0;0;1;2;1.58;3.6;5.91;2.15;https://www.flashscore.com/match/GCI687da/#/match-summary
+BRAZIL;SERIE B;ROUND 2;2023;18.06.2023;Sport Recife;Vila Nova FC;1;0;1;0;1.62;3.44;5.7;2.28;https://www.flashscore.com/match/AuXWfZ99/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;21.06.2023;CRB;Ituano;2;1;2;2;1.91;3.19;4.1;2.38;https://www.flashscore.com/match/EV6b6xXS/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;22.06.2023;Sport Recife;Juventude;2;0;3;0;1.62;3.55;5.76;2.2;https://www.flashscore.com/match/AwAsAKX3/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;23.06.2023;Atletico GO;Ponte Preta;1;0;1;0;1.65;3.55;5.45;2.24;https://www.flashscore.com/match/rRYnlwBp/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;24.06.2023;Botafogo SP;Vila Nova FC;0;2;0;3;3.37;2.93;2.26;2.7;https://www.flashscore.com/match/lOLYBt3i/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;24.06.2023;Avai;Londrina;0;0;0;0;1.97;3.13;4.06;2.37;https://www.flashscore.com/match/MHXjmcQj/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;24.06.2023;Chapecoense-SC;Criciuma;0;1;1;1;2.45;2.89;3.16;2.51;https://www.flashscore.com/match/I3Dk8b2G/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;24.06.2023;Tombense;Novorizontino;0;0;1;2;3.13;2.89;2.45;2.56;https://www.flashscore.com/match/dfCg7IHM/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;25.06.2023;Mirassol;ABC;1;1;3;2;1.44;3.85;7.55;2.22;https://www.flashscore.com/match/SEKxB0Ic/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;25.06.2023;Sampaio Correa;Ceara;1;1;1;1;2.51;2.98;2.92;2.37;https://www.flashscore.com/match/OtEo9vmA/#/match-summary
+BRAZIL;SERIE B;ROUND 13;2023;25.06.2023;Guarani;Vitoria;1;0;2;0;2.34;3.05;3.07;2.26;https://www.flashscore.com/match/2TKI55tI/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;27.06.2023;Criciuma;CRB;2;0;2;1;1.86;3.21;4.45;2.34;https://www.flashscore.com/match/8nBXazAd/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;27.06.2023;Chapecoense-SC;Sport Recife;0;1;1;1;3.56;2.91;2.22;2.76;https://www.flashscore.com/match/vXtXKynM/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;27.06.2023;Vila Nova FC;Tombense;0;0;1;0;1.6;3.51;5.79;2.21;https://www.flashscore.com/match/A1hU0Gfj/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;27.06.2023;Novorizontino;Botafogo SP;0;1;0;1;1.45;3.8;7.72;2.31;https://www.flashscore.com/match/lrlKNw23/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;28.06.2023;Ceara;Avai;0;0;0;0;1.73;3.48;4.88;2.13;https://www.flashscore.com/match/d8iSLHWF/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;28.06.2023;ABC;Atletico GO;0;0;1;1;2.98;2.91;2.52;2.56;https://www.flashscore.com/match/AFX2FF9q/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;28.06.2023;Vitoria;Sampaio Correa;0;1;2;1;1.71;3.34;5.33;2.35;https://www.flashscore.com/match/IHhOMcH9/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;28.06.2023;Londrina;Juventude;1;0;1;2;2.86;2.93;2.6;2.44;https://www.flashscore.com/match/hzoyKe1S/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;28.06.2023;Ituano;Ponte Preta;0;0;0;1;1.96;3.11;4.11;2.5;https://www.flashscore.com/match/AikGOJnc/#/match-summary
+BRAZIL;SERIE B;ROUND 14;2023;28.06.2023;Guarani;Mirassol;1;0;2;1;2.75;2.93;2.7;2.42;https://www.flashscore.com/match/GvgQ1dup/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;30.06.2023;Tombense;Chapecoense-SC;1;0;4;2;2.11;3.08;3.62;2.36;https://www.flashscore.com/match/SCJYSYwq/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;01.07.2023;Atletico GO;Vila Nova FC;0;0;1;1;2.51;2.94;2.91;2.43;https://www.flashscore.com/match/UHm4Dgvd/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;01.07.2023;Sampaio Correa;Criciuma;0;1;0;2;2.12;2.93;3.76;2.6;https://www.flashscore.com/match/dUS2YfGL/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;01.07.2023;Avai;ABC;0;1;0;2;1.9;2.97;4.53;2.66;https://www.flashscore.com/match/88n8CDg2/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;01.07.2023;CRB;Londrina;2;0;2;1;1.8;3.23;4.78;2.29;https://www.flashscore.com/match/Ay9wShgk/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;02.07.2023;Juventude;Vitoria;0;0;1;0;2.07;2.98;3.83;2.41;https://www.flashscore.com/match/Q3X6XEVR/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;02.07.2023;Sport Recife;Ceara;2;0;2;0;1.72;3.44;4.94;2.17;https://www.flashscore.com/match/IwUbZz1F/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;02.07.2023;Ponte Preta;Novorizontino;0;0;1;0;4.0;2.84;2.09;2.85;https://www.flashscore.com/match/l6W6EZOk/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;03.07.2023;Mirassol;Ituano;0;0;0;1;1.56;3.74;6.12;2.16;https://www.flashscore.com/match/zFvfzHo9/#/match-summary
+BRAZIL;SERIE B;ROUND 15;2023;03.07.2023;Botafogo SP;Guarani;0;0;1;0;2.47;2.86;3.15;2.62;https://www.flashscore.com/match/MBzjycW2/#/match-summary
+BRAZIL;SERIE B;ROUND 1;2023;05.07.2023;CRB;Sport Recife;1;0;2;0;2.75;2.87;2.72;2.49;https://www.flashscore.com/match/Cp56vEPS/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;07.07.2023;Novorizontino;Atletico GO;1;0;2;2;1.87;3.24;4.36;2.42;https://www.flashscore.com/match/C0uzX2dE/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;07.07.2023;Ceara;Botafogo SP;1;0;3;0;1.79;3.28;4.63;2.4;https://www.flashscore.com/match/KQrrVtRQ/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;08.07.2023;Guarani;Londrina;1;1;2;1;1.74;3.32;5.1;2.4;https://www.flashscore.com/match/MBCsRC8e/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;08.07.2023;ABC;Criciuma;0;1;0;1;2.92;2.73;2.68;2.79;https://www.flashscore.com/match/bZYHOv4f/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;08.07.2023;Ituano;Juventude;0;0;1;1;2.82;2.93;2.68;2.4;https://www.flashscore.com/match/Y9tWXrs8/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;08.07.2023;Avai;Ponte Preta;0;1;0;1;2.09;3.01;3.88;2.55;https://www.flashscore.com/match/fPAkPjw8/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;08.07.2023;Tombense;Sampaio Correa;0;0;0;1;2.13;3.0;3.7;2.3;https://www.flashscore.com/match/4bKEPKll/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;09.07.2023;Chapecoense-SC;CRB;0;0;2;1;2.0;3.07;4.04;2.46;https://www.flashscore.com/match/Q7LAQ0Zs/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;09.07.2023;Sport Recife;Mirassol;0;0;0;0;1.84;3.31;4.52;2.34;https://www.flashscore.com/match/6NvvWMBK/#/match-summary
+BRAZIL;SERIE B;ROUND 16;2023;10.07.2023;Vila Nova FC;Vitoria;0;0;1;0;1.76;3.21;5.16;2.66;https://www.flashscore.com/match/GYBoQWN1/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;13.07.2023;Criciuma;Guarani;0;1;1;1;1.95;3.08;4.25;2.44;https://www.flashscore.com/match/YiRULxlD/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;14.07.2023;Sampaio Correa;Ituano;0;0;0;0;1.88;3.1;4.56;2.65;https://www.flashscore.com/match/KnWlRXPh/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;14.07.2023;Atletico GO;Sport Recife;3;1;3;1;2.58;2.92;2.91;2.6;https://www.flashscore.com/match/KlNQMIY6/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;15.07.2023;Juventude;ABC;0;1;1;1;1.56;3.55;6.64;2.37;https://www.flashscore.com/match/E9VhQiua/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;15.07.2023;Ponte Preta;Tombense;0;0;0;1;2.12;3.02;3.6;2.36;https://www.flashscore.com/match/xQXLNbJ0/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;15.07.2023;Londrina;Vila Nova FC;1;0;1;0;4.01;3.03;2.0;2.6;https://www.flashscore.com/match/QqZdPBf5/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;16.07.2023;Mirassol;Ceara;1;1;1;1;1.77;3.27;4.72;2.24;https://www.flashscore.com/match/OKxtTget/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;16.07.2023;Vitoria;Novorizontino;2;0;2;1;2.64;2.86;2.9;2.8;https://www.flashscore.com/match/tdXpSDAn/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;17.07.2023;Botafogo SP;Criciuma;0;0;1;0;2.5;2.73;3.31;3.0;https://www.flashscore.com/match/KnhKtDPu/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;18.07.2023;Tombense;CRB;0;0;2;1;2.12;3.01;3.73;2.4;https://www.flashscore.com/match/Q5AXykvB/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;18.07.2023;Chapecoense-SC;Ituano;0;0;1;0;2.14;2.92;3.76;2.64;https://www.flashscore.com/match/nFBTxVO4/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;18.07.2023;Ponte Preta;Juventude;0;0;0;0;2.47;2.86;3.09;2.52;https://www.flashscore.com/match/naN5NkPH/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;19.07.2023;Novorizontino;Londrina;3;0;3;0;1.46;3.95;7.3;2.32;https://www.flashscore.com/match/YkdOuXvn/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;19.07.2023;Atletico GO;Mirassol;0;1;2;2;2.17;2.96;3.58;2.43;https://www.flashscore.com/match/GYR9M9vO/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;19.07.2023;Sport Recife;Vitoria;0;1;1;2;1.63;3.36;6.02;2.38;https://www.flashscore.com/match/SCeSvifh/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;19.07.2023;Ceara;Vila Nova FC;0;0;1;0;2.64;2.76;3.0;2.83;https://www.flashscore.com/match/63fWwB9b/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;19.07.2023;Avai;Sampaio Correa;1;0;2;0;2.02;2.94;4.23;2.86;https://www.flashscore.com/match/fPQDLTgU/#/match-summary
+BRAZIL;SERIE B;ROUND 18;2023;19.07.2023;ABC;Guarani;0;0;0;1;2.47;2.9;3.12;2.66;https://www.flashscore.com/match/KS9yy9gH/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;21.07.2023;CRB;Ponte Preta;1;0;1;0;1.9;3.07;4.52;2.47;https://www.flashscore.com/match/G8rJmnwN/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;22.07.2023;Mirassol;Tombense;2;0;2;0;1.67;3.5;5.27;2.17;https://www.flashscore.com/match/pAsbhAOi/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;22.07.2023;Vila Nova FC;ABC;0;0;1;1;1.45;3.86;8.06;2.4;https://www.flashscore.com/match/Gf3pZnOT/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;22.07.2023;Criciuma;Novorizontino;0;0;0;1;2.33;2.86;3.39;2.59;https://www.flashscore.com/match/I3kCU6Wp/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;22.07.2023;Ituano;Avai;0;1;0;1;2.17;2.96;3.62;2.78;https://www.flashscore.com/match/6Jrfgj9o/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;23.07.2023;Guarani;Atletico GO;1;0;1;0;2.36;2.94;3.25;2.39;https://www.flashscore.com/match/YVDuzT8N/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;23.07.2023;Juventude;Ceara;0;0;1;0;1.88;3.26;4.37;2.33;https://www.flashscore.com/match/KtkAk88A/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;23.07.2023;Sampaio Correa;Sport Recife;1;1;1;2;3.5;2.87;2.28;2.61;https://www.flashscore.com/match/QJk6jlg4/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;24.07.2023;Vitoria;Chapecoense-SC;0;0;1;0;1.66;3.41;5.67;2.38;https://www.flashscore.com/match/SYW2iUwb/#/match-summary
+BRAZIL;SERIE B;ROUND 19;2023;24.07.2023;Londrina;Botafogo SP;1;1;1;2;2.62;2.88;2.89;2.73;https://www.flashscore.com/match/bXmElSNG/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;28.07.2023;Ceara;Ituano;1;0;1;1;1.66;3.34;5.71;2.43;https://www.flashscore.com/match/hf9m3RxA/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;28.07.2023;Sport Recife;CRB;0;0;2;0;1.56;3.6;6.52;2.26;https://www.flashscore.com/match/E3Aq47N3/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;29.07.2023;Chapecoense-SC;Mirassol;0;0;0;1;3.2;2.93;2.4;2.61;https://www.flashscore.com/match/zJbh2ohG/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;29.07.2023;Botafogo SP;Juventude;0;1;0;2;2.46;2.84;3.2;2.72;https://www.flashscore.com/match/SnCy6Thi/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;29.07.2023;Avai;Guarani;1;1;1;2;2.29;2.92;3.4;2.78;https://www.flashscore.com/match/QsYhspGj/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;29.07.2023;ABC;Londrina;0;0;0;0;2.11;3.0;3.8;2.78;https://www.flashscore.com/match/rq200PMS/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;29.07.2023;Atletico GO;Sampaio Correa;0;2;2;2;1.55;3.76;6.07;2.19;https://www.flashscore.com/match/CvUlrQ0p/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;30.07.2023;Tombense;Criciuma;0;1;2;2;2.17;3.03;3.52;2.39;https://www.flashscore.com/match/lM2d157M/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;30.07.2023;Novorizontino;Vila Nova FC;2;0;3;1;2.01;2.9;4.29;3.0;https://www.flashscore.com/match/6wBu5m8c/#/match-summary
+BRAZIL;SERIE B;ROUND 20;2023;30.07.2023;Ponte Preta;Vitoria;2;0;2;2;2.5;2.85;3.04;2.54;https://www.flashscore.com/match/fasNn6hT/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;01.08.2023;Sampaio Correa;Botafogo SP;0;0;0;0;2.14;2.92;3.95;2.8;https://www.flashscore.com/match/SCNVF4MF/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;01.08.2023;Mirassol;Avai;0;0;2;2;1.62;3.52;6.04;2.46;https://www.flashscore.com/match/6cZMHQi3/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;01.08.2023;CRB;Atletico GO;1;0;2;1;2.39;2.93;3.16;2.49;https://www.flashscore.com/match/Gzu8dGLf/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;02.08.2023;Ituano;Tombense;1;0;1;0;1.98;3.08;4.08;2.5;https://www.flashscore.com/match/fNVII6xc/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;02.08.2023;Criciuma;Ponte Preta;2;1;2;1;1.72;3.38;5.11;2.42;https://www.flashscore.com/match/tKsyfNad/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;02.08.2023;Vitoria;ABC;0;0;2;0;1.45;3.83;7.69;2.44;https://www.flashscore.com/match/lMORGp79/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;02.08.2023;Vila Nova FC;Sport Recife;0;0;0;1;2.22;2.88;3.59;2.74;https://www.flashscore.com/match/2TrXf3pj/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;02.08.2023;Londrina;Chapecoense-SC;1;0;1;1;2.47;2.85;3.08;2.62;https://www.flashscore.com/match/YBk3cd6l/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;02.08.2023;Juventude;Novorizontino;1;0;1;0;2.37;2.84;3.27;2.71;https://www.flashscore.com/match/fLjabxir/#/match-summary
+BRAZIL;SERIE B;ROUND 21;2023;02.08.2023;Guarani;Ceara;0;0;0;0;2.02;3.11;3.8;2.48;https://www.flashscore.com/match/phlSeqVq/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;04.08.2023;Mirassol;Sampaio Correa;0;0;0;0;1.57;3.52;6.53;2.58;https://www.flashscore.com/match/Sp1bHHcK/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;05.08.2023;Avai;Criciuma;1;0;1;0;2.68;2.78;2.95;2.79;https://www.flashscore.com/match/2isKgE5D/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;05.08.2023;Ituano;Guarani;0;1;1;1;2.62;2.78;3.02;2.89;https://www.flashscore.com/match/lf2fIcrE/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;05.08.2023;CRB;Botafogo SP;0;0;0;0;1.75;3.27;5.07;2.6;https://www.flashscore.com/match/lIps9g50/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;05.08.2023;Sport Recife;Novorizontino;0;0;1;0;1.82;3.18;4.86;2.53;https://www.flashscore.com/match/M702GyDQ/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;06.08.2023;Ponte Preta;Chapecoense-SC;0;0;1;0;2.23;2.89;3.6;2.64;https://www.flashscore.com/match/UwqCezy1/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;06.08.2023;Ceara;ABC;1;0;1;0;1.58;3.6;6.12;2.31;https://www.flashscore.com/match/bTiUBeLs/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;07.08.2023;Juventude;Vila Nova FC;0;0;0;2;2.24;2.78;3.73;3.11;https://www.flashscore.com/match/thsZAFzl/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;07.08.2023;Londrina;Vitoria;0;0;2;0;3.11;3.0;2.34;2.69;https://www.flashscore.com/match/KrtwAZkf/#/match-summary
+BRAZIL;SERIE B;ROUND 22;2023;07.08.2023;Atletico GO;Tombense;0;2;3;2;1.68;3.48;5.12;2.15;https://www.flashscore.com/match/O0rGffj7/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;11.08.2023;Novorizontino;Mirassol;1;1;2;1;2.1;2.96;3.89;2.82;https://www.flashscore.com/match/E1PuUfsQ/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;11.08.2023;Tombense;Sport Recife;0;0;0;0;2.99;3.03;2.45;2.45;https://www.flashscore.com/match/tC9KMCZa/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;12.08.2023;Criciuma;Londrina;1;0;2;0;1.52;3.71;6.74;2.2;https://www.flashscore.com/match/M7xf6ikJ/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;12.08.2023;Sampaio Correa;CRB;0;0;1;1;2.3;2.98;3.27;2.59;https://www.flashscore.com/match/Yo6COY4m/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;12.08.2023;Botafogo SP;Ponte Preta;0;0;0;0;2.04;2.86;4.21;2.85;https://www.flashscore.com/match/zBQyVzSJ/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;12.08.2023;Vila Nova FC;Avai;0;1;1;1;1.64;3.43;5.77;2.46;https://www.flashscore.com/match/AXYk7XZC/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;13.08.2023;Chapecoense-SC;Atletico GO;0;0;0;1;2.72;2.91;2.75;2.54;https://www.flashscore.com/match/S85GNhKg/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;13.08.2023;Guarani;Juventude;0;0;0;1;2.29;2.78;3.49;2.96;https://www.flashscore.com/match/S8qo8DK6/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;13.08.2023;Vitoria;Ceara;1;0;1;0;2.09;3.01;3.7;2.58;https://www.flashscore.com/match/fe78PEks/#/match-summary
+BRAZIL;SERIE B;ROUND 23;2023;14.08.2023;ABC;Ituano;0;0;1;1;2.55;2.72;3.2;3.1;https://www.flashscore.com/match/OzaPLWl6/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;17.08.2023;Londrina;Atletico GO;0;0;0;2;3.18;2.97;2.36;2.42;https://www.flashscore.com/match/dlJ2ZkJ5/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;17.08.2023;Vila Nova FC;Mirassol;2;0;2;0;1.96;2.95;4.41;3.1;https://www.flashscore.com/match/AicXJAJI/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;18.08.2023;Vitoria;Botafogo SP;0;0;2;0;1.76;3.19;5.28;2.82;https://www.flashscore.com/match/MVQkxhZn/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;18.08.2023;Guarani;Sport Recife;3;1;3;1;2.76;2.75;2.8;3.03;https://www.flashscore.com/match/2RcTKj4C/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;19.08.2023;Avai;Tombense;1;1;4;2;1.9;3.17;4.35;2.41;https://www.flashscore.com/match/lrdyJUYO/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;19.08.2023;Ituano;Criciuma;2;0;3;0;2.67;2.84;2.9;2.51;https://www.flashscore.com/match/jmzKsEBP/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;19.08.2023;ABC;CRB;0;1;1;2;2.82;2.77;2.79;3.04;https://www.flashscore.com/match/jBI6Y9YB/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;19.08.2023;Juventude;Sampaio Correa;0;0;0;0;1.77;3.2;5.08;2.58;https://www.flashscore.com/match/IcKbzW3a/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;20.08.2023;Novorizontino;Chapecoense-SC;1;0;1;2;1.57;3.5;6.18;2.32;https://www.flashscore.com/match/S8RowYJt/#/match-summary
+BRAZIL;SERIE B;ROUND 24;2023;20.08.2023;Ceara;Ponte Preta;0;0;1;1;1.62;3.49;5.52;2.38;https://www.flashscore.com/match/0MPgyClg/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;22.08.2023;Mirassol;Juventude;0;0;0;1;1.9;3.0;4.71;2.89;https://www.flashscore.com/match/0z5SkB3n/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;22.08.2023;Criciuma;Vila Nova FC;1;0;1;0;2.08;2.93;3.98;2.71;https://www.flashscore.com/match/ABPIV7IU/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;23.08.2023;CRB;Avai;1;0;1;1;1.74;3.26;5.28;2.38;https://www.flashscore.com/match/88O1OV9B/#/match-summary
+BRAZIL;SERIE B;ROUND 17;2023;23.08.2023;Botafogo SP;Chapecoense-SC;0;2;1;2;2.11;2.84;4.06;2.9;https://www.flashscore.com/match/neFCpMQD/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;25.08.2023;Ponte Preta;Londrina;1;0;1;0;1.92;3.1;4.37;2.64;https://www.flashscore.com/match/ldyAXTmI/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;25.08.2023;Sport Recife;Ituano;0;2;1;2;1.43;3.88;8.36;2.33;https://www.flashscore.com/match/rafXlVIh/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;26.08.2023;Tombense;Ceara;0;2;2;2;2.25;3.05;3.31;2.33;https://www.flashscore.com/match/UFdqnT2B/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;26.08.2023;Sampaio Correa;Guarani;0;1;1;1;2.15;2.82;3.94;2.97;https://www.flashscore.com/match/d2bylkYb/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;26.08.2023;CRB;Novorizontino;1;0;1;0;2.56;2.92;2.94;2.6;https://www.flashscore.com/match/ARDtomIH/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;27.08.2023;Chapecoense-SC;Avai;0;0;0;0;2.0;3.08;4.15;2.54;https://www.flashscore.com/match/jPcum9m5/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;27.08.2023;Atletico GO;Vitoria;0;0;0;0;1.89;3.11;4.33;2.46;https://www.flashscore.com/match/WKQEWm3O/#/match-summary
+BRAZIL;SERIE B;ROUND 25;2023;28.08.2023;Botafogo SP;ABC;0;0;0;0;1.81;3.04;5.24;2.94;https://www.flashscore.com/match/Mq6Ojilt/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;30.08.2023;Novorizontino;Ituano;1;0;2;0;1.79;3.24;4.68;2.51;https://www.flashscore.com/match/xt42ZAz3/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;31.08.2023;Juventude;Chapecoense-SC;0;0;0;0;1.79;3.16;5.19;2.81;https://www.flashscore.com/match/SUdFW8KL/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;01.09.2023;Vitoria;Mirassol;0;0;0;0;2.03;2.93;4.18;2.85;https://www.flashscore.com/match/6F86YUk9/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;01.09.2023;Londrina;Tombense;0;1;1;1;2.6;2.91;2.92;2.62;https://www.flashscore.com/match/v50JVSZR/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;02.09.2023;Avai;Atletico GO;0;1;0;2;2.7;2.93;2.76;2.42;https://www.flashscore.com/match/fHvIRbHd/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;02.09.2023;Ceara;Criciuma;1;0;1;0;1.96;3.12;4.15;2.32;https://www.flashscore.com/match/p67AXl5F/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;02.09.2023;ABC;Sampaio Correa;0;1;1;1;2.43;2.75;3.38;3.3;https://www.flashscore.com/match/dpmoRnrq/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;02.09.2023;Guarani;Ponte Preta;1;0;1;0;1.79;3.14;5.1;2.88;https://www.flashscore.com/match/niyATKnp/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;03.09.2023;Vila Nova FC;CRB;0;0;0;1;1.76;3.01;5.56;2.89;https://www.flashscore.com/match/tEzESv2j/#/match-summary
+BRAZIL;SERIE B;ROUND 26;2023;03.09.2023;Botafogo SP;Sport Recife;1;1;1;1;3.26;2.77;2.43;3.21;https://www.flashscore.com/match/bk5bziLd/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;05.09.2023;Chapecoense-SC;Guarani;0;1;0;1;2.72;2.75;2.89;2.93;https://www.flashscore.com/match/Eazdqn4R/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;06.09.2023;Ceara;Londrina;3;1;3;1;1.51;3.63;7.4;2.38;https://www.flashscore.com/match/KOLhpSlL/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;07.09.2023;Tombense;ABC;1;0;3;0;1.64;3.36;5.93;2.38;https://www.flashscore.com/match/G8MNv6Cr/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;08.09.2023;Ituano;Vila Nova FC;0;2;1;2;2.88;2.69;2.83;3.05;https://www.flashscore.com/match/p6TumU42/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;09.09.2023;Ponte Preta;Sampaio Correa;0;0;0;0;2.26;2.79;3.72;3.12;https://www.flashscore.com/match/zynkQ6ck/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;09.09.2023;Mirassol;Botafogo SP;0;0;1;0;1.66;3.28;6.01;2.93;https://www.flashscore.com/match/b9XqnlK8/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;09.09.2023;Sport Recife;Criciuma;2;1;3;3;1.72;3.36;5.23;2.39;https://www.flashscore.com/match/tYMlo8ZE/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;10.09.2023;Atletico GO;Juventude;1;0;3;0;2.02;3.02;3.89;2.46;https://www.flashscore.com/match/hCtfPQCe/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;10.09.2023;CRB;Vitoria;3;0;6;0;2.2;2.92;3.61;2.88;https://www.flashscore.com/match/bXBSwQRl/#/match-summary
+BRAZIL;SERIE B;ROUND 27;2023;11.09.2023;Avai;Novorizontino;0;0;1;0;3.32;2.93;2.32;2.66;https://www.flashscore.com/match/W2ubOpS1/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;14.09.2023;Londrina;Ituano;2;2;2;2;2.54;2.82;3.12;2.75;https://www.flashscore.com/match/jRz6iqdl/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;15.09.2023;Vila Nova FC;Ponte Preta;1;1;1;1;1.59;3.38;6.73;2.66;https://www.flashscore.com/match/6cFzx4d1/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;15.09.2023;ABC;Sport Recife;0;0;0;1;5.47;3.12;1.75;2.76;https://www.flashscore.com/match/K0uAj3Bf/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;16.09.2023;Criciuma;Mirassol;1;1;2;1;2.32;2.88;3.42;2.74;https://www.flashscore.com/match/plEvyOB7/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;16.09.2023;Sampaio Correa;Chapecoense-SC;2;0;2;0;2.05;2.86;4.2;2.77;https://www.flashscore.com/match/6gaZd5YQ/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;16.09.2023;Botafogo SP;Atletico GO;1;0;1;0;3.24;2.86;2.41;2.87;https://www.flashscore.com/match/M5cNa7l8/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;16.09.2023;Juventude;CRB;0;0;3;1;2.02;2.92;4.23;2.78;https://www.flashscore.com/match/Czx2hPtr/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;17.09.2023;Guarani;Tombense;2;0;3;0;1.8;3.18;4.82;2.48;https://www.flashscore.com/match/CzGWxpse/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;17.09.2023;Vitoria;Avai;1;0;3;0;1.78;3.26;4.83;2.34;https://www.flashscore.com/match/fJeVcoJK/#/match-summary
+BRAZIL;SERIE B;ROUND 28;2023;18.09.2023;Novorizontino;Ceara;3;0;4;1;1.86;3.13;4.65;2.45;https://www.flashscore.com/match/0ddRbR3E/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;19.09.2023;Sampaio Correa;Vila Nova FC;1;1;2;1;2.78;2.75;2.85;2.92;https://www.flashscore.com/match/UXNX5rBs/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;22.09.2023;Ponte Preta;Mirassol;0;1;0;3;3.67;2.83;2.25;2.89;https://www.flashscore.com/match/bivEkNQ0/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;22.09.2023;Ituano;Vitoria;0;1;0;2;2.33;2.96;3.3;2.49;https://www.flashscore.com/match/8ML4CpYD/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;22.09.2023;Atletico GO;Criciuma;0;0;3;1;1.84;3.26;4.5;2.2;https://www.flashscore.com/match/tGTIlst7/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;23.09.2023;CRB;Guarani;0;0;1;0;2.07;3.0;3.87;2.74;https://www.flashscore.com/match/KMGp3te0/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;23.09.2023;Chapecoense-SC;Ceara;1;0;1;1;2.3;2.89;3.39;2.64;https://www.flashscore.com/match/OfNy52Qm/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;23.09.2023;Tombense;Botafogo SP;0;0;0;0;1.94;3.02;4.38;2.79;https://www.flashscore.com/match/xbRu4Muf/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;23.09.2023;Sport Recife;Londrina;1;0;4;0;1.34;4.38;9.64;2.11;https://www.flashscore.com/match/SOy6AO2Q/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;25.09.2023;Avai;Juventude;0;2;0;2;2.55;2.87;3.02;2.61;https://www.flashscore.com/match/fJXMm1eD/#/match-summary
+BRAZIL;SERIE B;ROUND 29;2023;25.09.2023;Novorizontino;ABC;2;0;2;1;1.27;4.84;12.0;2.11;https://www.flashscore.com/match/nDK8B4mK/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;28.09.2023;Mirassol;CRB;1;0;1;0;1.72;3.26;5.3;2.53;https://www.flashscore.com/match/42v87enn/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;28.09.2023;Londrina;Sampaio Correa;1;0;1;0;2.27;2.82;3.48;2.92;https://www.flashscore.com/match/YsWO3DoB/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;29.09.2023;Avai;Sport Recife;2;1;2;2;3.61;3.01;2.15;2.48;https://www.flashscore.com/match/6wJd0vuJ/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;29.09.2023;Vitoria;Tombense;0;0;1;0;1.52;3.65;6.78;2.24;https://www.flashscore.com/match/bPwC6F1h/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;30.09.2023;Juventude;Criciuma;0;0;1;0;1.92;3.03;4.46;2.64;https://www.flashscore.com/match/fiXK4gW4/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;30.09.2023;Ituano;Botafogo SP;1;1;1;1;1.84;3.05;4.89;2.78;https://www.flashscore.com/match/6HL48yXu/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;30.09.2023;Guarani;Novorizontino;1;1;2;1;2.35;2.86;3.32;2.71;https://www.flashscore.com/match/bDFl20A6/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;30.09.2023;ABC;Ponte Preta;0;0;2;0;2.35;2.73;3.54;3.06;https://www.flashscore.com/match/S4VS2X0H/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;01.10.2023;Vila Nova FC;Chapecoense-SC;0;0;0;0;1.71;3.36;5.24;2.47;https://www.flashscore.com/match/SnKh1KPC/#/match-summary
+BRAZIL;SERIE B;ROUND 30;2023;01.10.2023;Ceara;Atletico GO;0;0;0;1;2.18;2.98;3.46;2.28;https://www.flashscore.com/match/xGxG5ZGb/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;03.10.2023;Mirassol;Londrina;2;0;2;0;1.42;4.0;8.28;2.13;https://www.flashscore.com/match/WxbkKYVi/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;05.10.2023;Chapecoense-SC;ABC;0;0;0;0;1.57;3.4;6.92;2.45;https://www.flashscore.com/match/MRj2HWFA/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;06.10.2023;CRB;Ceara;1;0;2;0;1.95;3.14;4.2;2.36;https://www.flashscore.com/match/IgpBFApN/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;06.10.2023;Atletico GO;Ituano;1;0;1;0;1.62;3.62;5.62;2.1;https://www.flashscore.com/match/OWOy1BVT/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;07.10.2023;Tombense;Juventude;1;0;1;1;2.68;2.84;2.88;2.71;https://www.flashscore.com/match/0Ik6GjVG/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;07.10.2023;Sampaio Correa;Novorizontino;0;0;1;1;2.94;2.82;2.67;2.76;https://www.flashscore.com/match/S4ibIC04/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;07.10.2023;Botafogo SP;Avai;0;0;0;1;2.04;2.86;4.24;2.84;https://www.flashscore.com/match/hnaoLEGo/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;07.10.2023;Guarani;Vila Nova FC;0;1;1;1;2.3;2.85;3.49;2.82;https://www.flashscore.com/match/t8ZW1iGN/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;08.10.2023;Criciuma;Vitoria;1;0;1;0;2.14;2.87;3.8;2.6;https://www.flashscore.com/match/QuB3dVwo/#/match-summary
+BRAZIL;SERIE B;ROUND 31;2023;09.10.2023;Sport Recife;Ponte Preta;1;3;3;3;1.33;4.66;9.2;1.9;https://www.flashscore.com/match/E1mfJhob/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;10.10.2023;ABC;Mirassol;0;2;1;2;5.4;3.11;1.76;2.73;https://www.flashscore.com/match/4A8hSmUS/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;11.10.2023;Vila Nova FC;Botafogo SP;2;0;3;1;1.64;3.31;6.24;2.72;https://www.flashscore.com/match/EPVtAl8p/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;13.10.2023;Criciuma;Chapecoense-SC;0;1;1;2;1.75;3.4;4.86;2.27;https://www.flashscore.com/match/QaZp98Nj/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;14.10.2023;Novorizontino;Tombense;0;0;0;0;1.44;4.09;7.42;1.93;https://www.flashscore.com/match/6eCXWBFc/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;14.10.2023;Ituano;CRB;0;0;0;0;2.16;2.97;3.66;2.56;https://www.flashscore.com/match/S4DTXi0i/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;14.10.2023;Ceara;Sampaio Correa;0;0;0;0;1.67;3.44;5.44;2.28;https://www.flashscore.com/match/ELFuVkpA/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;15.10.2023;Ponte Preta;Atletico GO;0;1;0;2;3.19;2.89;2.36;2.56;https://www.flashscore.com/match/dpqFEUaT/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;15.10.2023;Vitoria;Guarani;1;0;2;0;1.86;3.03;4.91;2.59;https://www.flashscore.com/match/zVGyWVU3/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;15.10.2023;Londrina;Avai;1;0;1;1;2.24;2.9;3.48;2.55;https://www.flashscore.com/match/Am9lTTEM/#/match-summary
+BRAZIL;SERIE B;ROUND 32;2023;16.10.2023;Juventude;Sport Recife;1;1;2;2;2.31;2.91;3.34;2.52;https://www.flashscore.com/match/dp5pU9aG/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;19.10.2023;Tombense;Vila Nova FC;0;1;2;1;3.12;2.88;2.46;2.56;https://www.flashscore.com/match/8I9Nu7bS/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;19.10.2023;Atletico GO;ABC;1;0;3;1;1.35;4.58;9.22;1.96;https://www.flashscore.com/match/YuRGMRij/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;20.10.2023;Sampaio Correa;Vitoria;0;1;0;1;2.76;2.88;2.75;2.66;https://www.flashscore.com/match/0h6FsTTF/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;20.10.2023;Mirassol;Guarani;0;0;0;0;1.76;3.3;5.05;2.59;https://www.flashscore.com/match/vwI6qka3/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;21.10.2023;CRB;Criciuma;0;0;0;1;1.96;3.17;4.02;2.38;https://www.flashscore.com/match/EanjyR6q/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;21.10.2023;Botafogo SP;Novorizontino;1;0;2;0;3.47;2.91;2.27;2.76;https://www.flashscore.com/match/QZD2pVqc/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;21.10.2023;Juventude;Londrina;1;2;2;2;1.61;3.49;6.05;2.38;https://www.flashscore.com/match/URAJtmqM/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;22.10.2023;Sport Recife;Chapecoense-SC;0;1;2;1;1.42;4.14;7.3;2.05;https://www.flashscore.com/match/M17Br9E9/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;22.10.2023;Avai;Ceara;0;0;1;0;2.25;3.06;3.24;2.32;https://www.flashscore.com/match/CWPKLo7d/#/match-summary
+BRAZIL;SERIE B;ROUND 33;2023;23.10.2023;Ponte Preta;Ituano;0;0;0;0;2.63;2.83;2.97;2.67;https://www.flashscore.com/match/6JfKN7xp/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;26.10.2023;ABC;Avai;0;1;1;1;2.68;2.87;2.79;2.44;https://www.flashscore.com/match/lznZzIC0/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;27.10.2023;Ceara;Sport Recife;1;1;2;1;2.55;3.0;2.91;2.3;https://www.flashscore.com/match/KfbMwKSs/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;27.10.2023;Novorizontino;Ponte Preta;0;0;2;0;1.36;4.44;9.15;2.07;https://www.flashscore.com/match/EeWldSr9/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;27.10.2023;Guarani;Botafogo SP;0;0;0;1;1.67;3.3;5.83;2.66;https://www.flashscore.com/match/QZkfzoMk/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;28.10.2023;Ituano;Mirassol;0;0;0;0;3.31;2.88;2.31;2.67;https://www.flashscore.com/match/z5Xpc8T2/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;28.10.2023;Criciuma;Sampaio Correa;3;0;3;0;1.54;3.58;6.58;2.28;https://www.flashscore.com/match/bml2YOj2/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;28.10.2023;Vila Nova FC;Atletico GO;0;0;2;1;2.33;2.96;3.19;2.47;https://www.flashscore.com/match/KdkbZ4yd/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;29.10.2023;Londrina;CRB;0;0;1;1;2.66;2.88;2.79;2.5;https://www.flashscore.com/match/tAnVybcf/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;29.10.2023;Vitoria;Juventude;0;0;0;0;1.91;3.06;4.42;2.56;https://www.flashscore.com/match/8IVhenbF/#/match-summary
+BRAZIL;SERIE B;ROUND 34;2023;30.10.2023;Chapecoense-SC;Tombense;0;1;1;2;2.09;3.08;3.68;2.31;https://www.flashscore.com/match/2JmRxvrl/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;01.11.2023;Atletico GO;Novorizontino;1;2;2;2;2.2;3.04;3.35;2.32;https://www.flashscore.com/match/AkzrZesD/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;03.11.2023;Mirassol;Sport Recife;1;0;2;1;1.96;3.11;4.17;2.54;https://www.flashscore.com/match/GnRXeJlQ/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;03.11.2023;Londrina;Guarani;0;0;0;0;2.72;2.93;2.75;2.52;https://www.flashscore.com/match/SvQBlys0/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;03.11.2023;Juventude;Ituano;1;0;2;1;1.79;3.22;4.94;2.43;https://www.flashscore.com/match/Ug78kHRg/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;04.11.2023;Ponte Preta;Avai;0;0;0;1;2.44;2.85;3.22;2.62;https://www.flashscore.com/match/SQpwzxS6/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;04.11.2023;Botafogo SP;Ceara;1;1;2;2;2.04;3.0;4.02;2.6;https://www.flashscore.com/match/xdSTdaZJ/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;04.11.2023;Sampaio Correa;Tombense;1;1;1;2;2.24;3.02;3.41;2.48;https://www.flashscore.com/match/zX74jcCm/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;05.11.2023;Vitoria;Vila Nova FC;0;1;1;1;1.97;3.0;4.33;2.61;https://www.flashscore.com/match/dt90iwcs/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;07.11.2023;CRB;Chapecoense-SC;2;1;3;2;1.92;3.21;4.14;2.29;https://www.flashscore.com/match/A3FGmed6/#/match-summary
+BRAZIL;SERIE B;ROUND 35;2023;07.11.2023;Criciuma;ABC;1;0;1;0;1.28;4.95;10.88;2.04;https://www.flashscore.com/match/OhvnYFdJ/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;10.11.2023;Vila Nova FC;Londrina;2;0;4;1;1.4;4.36;8.06;1.97;https://www.flashscore.com/match/ITIOoZQI/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;10.11.2023;Sport Recife;Atletico GO;0;0;0;0;1.87;3.41;4.13;2.14;https://www.flashscore.com/match/WzZvlP7n/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;11.11.2023;Ituano;Sampaio Correa;2;0;2;1;1.89;3.14;4.61;2.5;https://www.flashscore.com/match/0hr9gopP/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;11.11.2023;Chapecoense-SC;Botafogo SP;0;0;2;0;1.81;3.22;4.82;2.46;https://www.flashscore.com/match/jwktn3xa/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;11.11.2023;Avai;CRB;1;0;1;1;2.12;3.14;3.59;2.31;https://www.flashscore.com/match/dKHSpgtP/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;11.11.2023;Tombense;Ponte Preta;0;0;0;1;1.6;3.48;5.7;2.28;https://www.flashscore.com/match/UTmpoNi5/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;12.11.2023;Ceara;Mirassol;0;0;2;0;3.19;2.96;2.33;2.44;https://www.flashscore.com/match/ARXrmqNh/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;12.11.2023;Novorizontino;Vitoria;1;1;1;2;1.85;3.12;4.43;2.4;https://www.flashscore.com/match/xEZzk5ht/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;14.11.2023;Guarani;Criciuma;0;1;1;1;2.52;2.95;3.01;2.5;https://www.flashscore.com/match/lfEKnFBC/#/match-summary
+BRAZIL;SERIE B;ROUND 36;2023;14.11.2023;ABC;Juventude;0;0;0;0;7.19;3.6;1.53;2.52;https://www.flashscore.com/match/Ojmlps7B/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;17.11.2023;Ituano;Chapecoense-SC;0;0;0;0;2.18;3.02;3.55;2.5;https://www.flashscore.com/match/AsM62OMu/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;17.11.2023;Londrina;Novorizontino;0;0;0;1;5.48;3.84;1.58;1.96;https://www.flashscore.com/match/GpCRc0yB/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;18.11.2023;Vitoria;Sport Recife;0;0;1;0;2.81;3.0;2.62;2.39;https://www.flashscore.com/match/WdAF02ih/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;18.11.2023;Vila Nova FC;Ceara;1;1;3;1;1.55;3.72;6.34;2.24;https://www.flashscore.com/match/KItcrLyO/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;18.11.2023;Mirassol;Atletico GO;2;0;4;1;2.2;3.08;3.42;2.44;https://www.flashscore.com/match/lYKA1rxn/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;18.11.2023;Juventude;Ponte Preta;0;0;0;0;1.67;3.36;5.8;2.68;https://www.flashscore.com/match/xfDNbtM4/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;18.11.2023;Criciuma;Botafogo SP;1;0;3;0;1.4;4.04;8.93;2.35;https://www.flashscore.com/match/b9u1suiU/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;19.11.2023;Guarani;ABC;1;1;2;3;1.42;4.1;7.86;2.24;https://www.flashscore.com/match/xfihq1MH/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;19.11.2023;CRB;Tombense;0;0;2;0;2.16;3.16;3.4;2.14;https://www.flashscore.com/match/YL6WdKjH/#/match-summary
+BRAZIL;SERIE B;ROUND 37;2023;20.11.2023;Sampaio Correa;Avai;3;0;4;0;1.72;3.39;5.14;2.32;https://www.flashscore.com/match/rXDJaM6b/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;Tombense;Mirassol;0;0;0;1;2.95;3.3;2.31;2.02;https://www.flashscore.com/match/hpt9AwLG/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;Sport Recife;Sampaio Correa;3;0;4;1;1.51;3.98;6.15;2.03;https://www.flashscore.com/match/IRmdDuyb/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;Ponte Preta;CRB;1;0;3;0;1.7;3.48;5.01;2.33;https://www.flashscore.com/match/CC5zdv6N/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;Novorizontino;Criciuma;1;0;2;0;1.43;4.26;6.82;2.01;https://www.flashscore.com/match/OjZhELLi/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;Chapecoense-SC;Vitoria;1;1;3;1;1.57;3.89;5.4;2.06;https://www.flashscore.com/match/vsx5BJ5A/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;Ceara;Juventude;1;1;1;3;3.6;3.15;2.12;2.38;https://www.flashscore.com/match/dIn0Caj4/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;Botafogo SP;Londrina;0;0;0;1;1.6;3.78;5.6;2.03;https://www.flashscore.com/match/p0zkF16o/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;Avai;Ituano;0;0;0;0;2.24;3.23;3.2;2.09;https://www.flashscore.com/match/red6jITp/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;Atletico GO;Guarani;0;0;3;0;1.33;4.64;9.48;1.96;https://www.flashscore.com/match/6Z4vebLT/#/match-summary
+BRAZIL;SERIE B;ROUND 38;2023;25.11.2023;ABC;Vila Nova FC;2;0;3;2;7.02;4.06;1.44;2.13;https://www.flashscore.com/match/pt4xgBkq/#/match-summary
