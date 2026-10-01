@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import pandas as pd
 
+from src.config import TEMPORADA
+
 COLUNAS = {
     "ID": "id_partida",
     "rodata": "rodada",
@@ -31,7 +33,7 @@ def ler_bruto(caminho) -> pd.DataFrame:
 def limpar_texto(df: pd.DataFrame) -> pd.DataFrame:
     """Remove espaço não separável (\\xa0) e espaços nas pontas; string vazia vira nulo."""
     df = df.copy()
-    for col in df.select_dtypes("object").columns:
+    for col in df.select_dtypes(include=["object", "str"]).columns:
         s = df[col].str.replace("\xa0", " ", regex=False).str.strip()
         df[col] = s.replace("", pd.NA)
     return df
@@ -58,6 +60,7 @@ def transformar(bruto: pd.DataFrame) -> pd.DataFrame:
 
     df["data"] = pd.to_datetime(df["data"], format="%d/%m/%Y")
     df["temporada"] = calcular_temporada(df["data"])
+    df = df[df["temporada"] == TEMPORADA].copy()
     df["vencedor"] = df["vencedor"].replace("-", pd.NA)
     df["resultado"] = resultado(df["gols_mandante"], df["gols_visitante"])
     df["total_gols"] = df["gols_mandante"] + df["gols_visitante"]

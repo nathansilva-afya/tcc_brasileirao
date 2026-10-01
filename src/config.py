@@ -16,5 +16,7 @@ KAGGLE_FILE = "campeonato-brasileiro-full.csv"
 RAW_PARTIDAS = RAW_DIR / "campeonato_brasileiro_de_futebol.csv"
 PARTIDAS = PROCESSED_DIR / "partidas.csv"
 
+TEMPORADA = 2025  # o projeto analisa apenas esta temporada
+
 PONTOS_VITORIA = 3
 PONTOS_EMPATE = 1

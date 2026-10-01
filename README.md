@@ -1,7 +1,7 @@
 # Brasileirão Série A — Pipeline e Análise de Dados (TCC)
 
-Pipeline de engenharia de dados para análise do Campeonato Brasileiro Série A na era dos
-pontos corridos (2003–2025), a partir do dataset público
+Pipeline de engenharia de dados para análise do Campeonato Brasileiro Série A de **2025**
+(380 jogos, 38 rodadas, 20 times), a partir do dataset público
 [adaoduque/campeonato-brasileiro-de-futebol](https://www.kaggle.com/datasets/adaoduque/campeonato-brasileiro-de-futebol).
 
 ## Arquitetura
@@ -17,9 +17,9 @@ Kaggle ──extract──▶ data/raw ──transform + validate──▶ data/
 
 | Camada | Pasta | Conteúdo |
 |---|---|---|
-| Bronze | `data/raw/` | CSV original, sem alterações |
+| Bronze | `data/raw/` | CSV original, apenas as linhas de 2025 (valores sem alterações) |
 | Silver | `data/processed/` | `partidas.csv`: uma linha por partida, limpa e tipada |
-| Gold | `data/analytics/` | Tabelas agregadas para análise (classificação, mando, histórico…) |
+| Gold | `data/analytics/` | Tabelas agregadas para análise (classificação, mando, resumo) |
 | Export | `data/exports/` | Mesmas tabelas em CSV `;` / UTF-8 com BOM, para abrir no Excel |
 
 ## Estrutura
@@ -64,25 +64,16 @@ geradas pelo pipeline: quem clonar o projeto recria tudo com `make pipeline`. Os
 
 ## Tratamentos aplicados
 
-- Leitura em UTF-8. No arquivo original, 5.077 valores de `arena` começavam com um espaço
-  não separável (`\xa0`); esse caractere é removido e as pontas são aparadas.
+- Somente a temporada 2025 (`TEMPORADA` em `src/config.py`) é mantida: o download grava só
+  os jogos de 2025 no bronze e a transformação filtra de novo pela temporada.
+- Leitura em UTF-8. Espaços não separáveis (`\xa0`) são removidos e as pontas são aparadas.
 - As colunas são renomeadas (`rodata` → `rodada`, `mandante_Placar` → `gols_mandante`…).
-- A coluna `temporada` é derivada da data. A temporada 2020 terminou em fevereiro de 2021 por
-  causa da pandemia, então jogos de jan/fev contam para a temporada anterior.
+- A coluna `temporada` é derivada da data (jogos de jan/fev contariam para a temporada anterior).
 - Colunas derivadas: `resultado` (M/E/V) e `total_gols`. Quando há empate, `vencedor` fica nulo.
 - Validações: `id` único, colunas obrigatórias sem nulos, placares não negativos, `vencedor`
   coerente com o placar e UF válida.
 
 ## Limitações conhecidas
 
-- **2016** tem 379 jogos: Chapecoense x Atlético-MG não foi disputado (tragédia aérea).
-- A classificação é recalculada a partir dos jogos e **não considera punições do STJD**
-  (ex.: Portuguesa e Flamengo em 2013). Por isso as posições podem divergir da tabela oficial.
-- `formacao_*`, `tecnico_*` e `arrecadacao` só existem para parte das temporadas (ver
-  `docs/dicionario_dados.md`).
-- Barueri e Grêmio Prudente são o mesmo clube com nomes diferentes e aparecem separados.
-
-## Outros dados em `data/raw/`
-
-`serie-b-2023.csv` e `Brasileirao_Matches.csv` ficam guardados como fontes complementares e
-ainda **não** passam pelo pipeline.
+- A classificação é recalculada a partir dos jogos e **não considera punições do STJD**.
+  Por isso as posições podem divergir da tabela oficial.

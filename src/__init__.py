@@ -1,1 +1,1 @@
-"""Pipeline de dados do Campeonato Brasileiro Série A (2003+)."""
+"""Pipeline de dados do Campeonato Brasileiro Série A (temporada 2025)."""

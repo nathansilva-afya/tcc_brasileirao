@@ -9,7 +9,7 @@ def bruto():
     return pd.DataFrame({
         "ID": [1, 2, 3],
         "rodata": [1, 1, 38],
-        "data": ["29/03/2020", "29/03/2020", "25/02/2021"],
+        "data": ["29/03/2025", "29/03/2025", "07/12/2025"],
         "hora": ["16:00"] * 3,
         "mandante": ["Flamengo", "Santos", "Flamengo"],
         "visitante": ["Vasco", "Palmeiras", "Santos"],
@@ -32,9 +32,11 @@ def test_limpa_espaco_nao_separavel(bruto):
     assert set(df["arena"]) == {"Maracanã", "Vila Belmiro"}
 
 
-def test_temporada_2020_terminou_em_2021(bruto):
-    df = transform.transformar(bruto)
-    assert (df["temporada"] == 2020).all()
+def test_mantem_apenas_2025(bruto):
+    outra = bruto.iloc[[0]].assign(ID=4, data="08/12/2024")
+    df = transform.transformar(pd.concat([bruto, outra], ignore_index=True))
+    assert (df["temporada"] == 2025).all()
+    assert set(df["id_partida"]) == {1, 2, 3}
 
 
 def test_resultado_e_empate(bruto):

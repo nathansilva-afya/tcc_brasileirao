@@ -1,4 +1,4 @@
-"""Camada analítica (gold): tabelas agregadas prontas para o TCC."""
+"""Camada analítica (gold): tabelas agregadas da temporada 2025, prontas para o TCC."""
 from __future__ import annotations
 
 import pandas as pd
@@ -68,28 +68,6 @@ def resumo_temporadas(partidas: pd.DataFrame, tabela: pd.DataFrame) -> pd.DataFr
     return r.round(4).reset_index()
 
 
-def historico_times(tabela: pd.DataFrame) -> pd.DataFrame:
-    """Consolidado de todas as temporadas por time."""
-    h = tabela.groupby("time", as_index=False).agg(
-        temporadas=("temporada", "nunique"),
-        primeira=("temporada", "min"),
-        ultima=("temporada", "max"),
-        titulos=("posicao", lambda s: (s == 1).sum()),
-        top4=("posicao", lambda s: (s <= 4).sum()),
-        melhor_posicao=("posicao", "min"),
-        jogos=("jogos", "sum"),
-        vitorias=("vitorias", "sum"),
-        empates=("empates", "sum"),
-        derrotas=("derrotas", "sum"),
-        gols_pro=("gols_pro", "sum"),
-        gols_contra=("gols_contra", "sum"),
-        pontos=("pontos", "sum"),
-    )
-    h["saldo_gols"] = h["gols_pro"] - h["gols_contra"]
-    h["aproveitamento"] = (h["pontos"] / (h["jogos"] * PONTOS_VITORIA)).round(4)
-    return h.sort_values(["pontos", "aproveitamento"], ascending=False).reset_index(drop=True)
-
-
 def construir(partidas: pd.DataFrame) -> dict:
     """Gera todas as tabelas gold. Retorna {nome_arquivo: DataFrame}."""
     ppt = partidas_por_time(partidas)
@@ -99,5 +77,4 @@ def construir(partidas: pd.DataFrame) -> dict:
         "classificacao": tabela,
         "desempenho_mando": desempenho_mando(ppt),
         "resumo_temporadas": resumo_temporadas(partidas, tabela),
-        "historico_times": historico_times(tabela),
     }

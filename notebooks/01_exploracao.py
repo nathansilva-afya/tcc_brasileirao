@@ -14,23 +14,22 @@ from src.transform import ler_partidas
 partidas = ler_partidas(config.PARTIDAS)
 classificacao = pd.read_csv(config.ANALYTICS_DIR / "classificacao.csv")
 resumo = pd.read_csv(config.ANALYTICS_DIR / "resumo_temporadas.csv")
-historico = pd.read_csv(config.ANALYTICS_DIR / "historico_times.csv")
 mando = pd.read_csv(config.ANALYTICS_DIR / "desempenho_mando.csv")
 
 partidas.info()
 
-# %% Campeões e pontuação
+# %% Resumo da temporada 2025
 resumo[["temporada", "campeao", "pontos_campeao", "media_gols", "pct_vitoria_mandante"]]
 
-# %% Maiores campeões (era dos pontos corridos)
-historico.sort_values("titulos", ascending=False)[["time", "titulos", "top4", "temporadas", "aproveitamento"]].head(10)
+# %% Classificação final
+classificacao[["posicao", "time", "pontos", "vitorias", "empates", "derrotas", "saldo_gols", "aproveitamento"]]
 
-# %% Vantagem do mando de campo ao longo do tempo (2020-2021 sem público)
-resumo.set_index("temporada")[["pct_vitoria_mandante", "pct_empate", "pct_vitoria_visitante"]].plot(
-    title="Resultado por mando de campo", figsize=(10, 4))
+# %% Distribuição dos resultados por mando de campo
+resumo.set_index("temporada")[["pct_vitoria_mandante", "pct_empate", "pct_vitoria_visitante"]].T.plot.bar(
+    title="Resultado por mando de campo (2025)", figsize=(8, 4), legend=False)
 
 # %% Aproveitamento em casa x fora por time
-(mando.groupby(["time", "mando"])["aproveitamento"].mean()
+(mando.set_index(["time", "mando"])["aproveitamento"]
       .unstack().assign(diferenca=lambda d: d["casa"] - d["fora"])
       .sort_values("diferenca", ascending=False).head(10))
 
