@@ -15,4 +15,4 @@ test:
 	$(PY) -m pytest -q
 
 clean:
-	rm -f data/processed/*.csv data/analytics/*.csv data/exports/*.csv
+	rm -f data/processed/*.csv data/analytics/*.csv data/exports/*.csv figuras/*.png

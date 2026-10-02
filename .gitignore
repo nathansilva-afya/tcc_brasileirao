@@ -9,4 +9,6 @@ __pycache__/
 data/processed/*
 data/analytics/*
 data/exports/*
+figuras/*
 !data/**/.gitkeep
+!figuras/.gitkeep

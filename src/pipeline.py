@@ -1,4 +1,4 @@
-"""Orquestra o pipeline: extract -> transform -> validate -> analytics -> load.
+"""Orquestra o pipeline: extract -> transform -> validate -> analytics -> load -> figuras.
 
 Uso (na raiz do projeto):
     python -m src.pipeline
@@ -9,7 +9,7 @@ from __future__ import annotations
 import argparse
 import logging
 
-from src import analytics, config, extract, load, transform, validate
+from src import analytics, config, extract, figuras, load, transform, validate
 
 log = logging.getLogger("pipeline")
 
@@ -22,9 +22,12 @@ def executar(forcar_download: bool = False) -> None:
     load.salvar(partidas, config.PARTIDAS)
     load.exportar_excel(partidas, "partidas")
 
-    for nome, df in analytics.construir(partidas).items():
+    tabelas = analytics.construir(partidas)
+    for nome, df in tabelas.items():
         load.salvar(df, config.ANALYTICS_DIR / f"{nome}.csv")
         load.exportar_excel(df, nome)
+
+    figuras.gerar(tabelas)
 
     log.info("Pipeline concluído")
 
