@@ -27,7 +27,7 @@
 | partidas_por_time.csv | time × partida | time, adversario, mando (casa/fora), gols_pro, gols_contra, vitoria, empate, derrota, pontos |
 | classificacao.csv | time | posicao, jogos, V/E/D, gols_pro, gols_contra, saldo_gols, pontos, aproveitamento |
 | desempenho_mando.csv | time × mando | as mesmas métricas de `classificacao`, separadas entre casa e fora |
-| resumo_temporadas.csv | temporada (1 linha) | jogos, times, media_gols, % de vitórias do mandante, % de empates, % de vitórias do visitante, campeao |
+| resumo_temporada.csv | temporada 2025 (1 linha) | jogos, times, media_gols, % de vitórias do mandante, % de empates, % de vitórias do visitante, campeao |
 
 `aproveitamento` = pontos ÷ (jogos × 3). Critérios de desempate da classificação: pontos,
 vitórias, saldo de gols, gols pró.

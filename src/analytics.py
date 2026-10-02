@@ -38,7 +38,7 @@ def _agregar(df: pd.DataFrame, chaves: list) -> pd.DataFrame:
 
 
 def classificacao(ppt: pd.DataFrame) -> pd.DataFrame:
-    """Tabela final de cada temporada. Critérios: pontos, vitórias, saldo, gols pró.
+    """Classificação final de 2025. Critérios: pontos, vitórias, saldo, gols pró.
     Obs.: não considera punições de pontos aplicadas fora de campo (ex.: STJD)."""
     t = _agregar(ppt, ["temporada", "time"])
     t = t.sort_values(["temporada", "pontos", "vitorias", "saldo_gols", "gols_pro"],
@@ -48,12 +48,12 @@ def classificacao(ppt: pd.DataFrame) -> pd.DataFrame:
 
 
 def desempenho_mando(ppt: pd.DataFrame) -> pd.DataFrame:
-    """Desempenho de cada time em casa e fora, por temporada."""
+    """Desempenho de cada time em casa e fora."""
     return _agregar(ppt, ["temporada", "time", "mando"])
 
 
-def resumo_temporadas(partidas: pd.DataFrame, tabela: pd.DataFrame) -> pd.DataFrame:
-    """Indicadores gerais por temporada (vantagem do mando, média de gols, campeão)."""
+def resumo_temporada(partidas: pd.DataFrame, tabela: pd.DataFrame) -> pd.DataFrame:
+    """Indicadores gerais da temporada 2025 (vantagem do mando, média de gols, campeão)."""
     r = partidas.groupby("temporada").agg(
         jogos=("id_partida", "size"),
         times=("mandante", "nunique"),
@@ -76,5 +76,5 @@ def construir(partidas: pd.DataFrame) -> dict:
         "partidas_por_time": ppt,
         "classificacao": tabela,
         "desempenho_mando": desempenho_mando(ppt),
-        "resumo_temporadas": resumo_temporadas(partidas, tabela),
+        "resumo_temporada": resumo_temporada(partidas, tabela),
     }

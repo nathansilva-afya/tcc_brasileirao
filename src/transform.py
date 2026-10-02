@@ -33,15 +33,15 @@ def ler_bruto(caminho) -> pd.DataFrame:
 def limpar_texto(df: pd.DataFrame) -> pd.DataFrame:
     """Remove espaço não separável (\\xa0) e espaços nas pontas; string vazia vira nulo."""
     df = df.copy()
-    for col in df.select_dtypes(include=["object", "str"]).columns:
+    for col in df.columns[[pd.api.types.is_string_dtype(t) for t in df.dtypes]]:
         s = df[col].str.replace("\xa0", " ", regex=False).str.strip()
         df[col] = s.replace("", pd.NA)
     return df
 
 
 def calcular_temporada(data: pd.Series) -> pd.Series:
-    """Temporada do campeonato. A de 2020 terminou em fev/2021 (pandemia); como nenhuma
-    temporada começa em jan/fev, jogos nesses meses pertencem à temporada anterior."""
+    """Temporada do campeonato. Como o Brasileirão não começa em jan/fev, jogos nesses
+    meses pertencem à temporada anterior (ex.: fev/2026 não conta como 2025)."""
     ano = data.dt.year
     return ano.where(data.dt.month > 2, ano - 1)
 

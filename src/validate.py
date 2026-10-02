@@ -5,6 +5,8 @@ import logging
 
 import pandas as pd
 
+from src.config import TEMPORADA
+
 log = logging.getLogger(__name__)
 
 OBRIGATORIAS = ["id_partida", "temporada", "rodada", "data", "mandante", "visitante",
@@ -25,6 +27,9 @@ def validar(df: pd.DataFrame) -> None:
     for col, n in nulos[nulos > 0].items():
         erros.append(f"{n} nulos na coluna obrigatória '{col}'")
 
+    if (df["temporada"] != TEMPORADA).any():
+        erros.append(f"partidas fora da temporada {TEMPORADA}")
+
     if (df[["gols_mandante", "gols_visitante"]] < 0).any().any():
         erros.append("placar negativo")
 
@@ -43,16 +48,10 @@ def validar(df: pd.DataFrame) -> None:
     if erros:
         raise ErroQualidade("; ".join(erros))
 
-    # Avisos (não bloqueiam): temporadas com número de jogos fora do padrão
-    jogos = df.groupby("temporada").size()
-    times = pd.concat([df[["temporada", "mandante"]].set_axis(["temporada", "time"], axis=1),
-                       df[["temporada", "visitante"]].set_axis(["temporada", "time"], axis=1)]
-                      ).drop_duplicates().groupby("temporada").size()
-    for temporada, n in jogos.items():
-        esperado_jogos = times[temporada] * (times[temporada] - 1)
-        if n != esperado_jogos:
-            log.warning("Temporada %s: %d jogos (esperado %d para %d times)",
-                        temporada, n, esperado_jogos, times[temporada])
+    # Aviso (não bloqueia): turno e returno completos têm times × (times − 1) jogos
+    times = pd.concat([df["mandante"], df["visitante"]]).nunique()
+    if len(df) != times * (times - 1):
+        log.warning("Temporada %d: %d jogos (esperado %d para %d times)",
+                    TEMPORADA, len(df), times * (times - 1), times)
 
-    log.info("Validação OK: %d partidas, temporadas %d-%d",
-             len(df), df["temporada"].min(), df["temporada"].max())
+    log.info("Validação OK: %d partidas da temporada %d", len(df), TEMPORADA)
