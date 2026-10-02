@@ -20,14 +20,3 @@ TEMPORADA = 2025  # o projeto analisa apenas esta temporada
 
 PONTOS_VITORIA = 3
 PONTOS_EMPATE = 1
-
-FIGURAS_DIR = ROOT / "figuras"  # gráficos PNG para o texto do TCC
-
-REGIAO = {
-    "AC": "Norte", "AM": "Norte", "AP": "Norte", "PA": "Norte", "RO": "Norte", "RR": "Norte", "TO": "Norte",
-    "AL": "Nordeste", "BA": "Nordeste", "CE": "Nordeste", "MA": "Nordeste", "PB": "Nordeste",
-    "PE": "Nordeste", "PI": "Nordeste", "RN": "Nordeste", "SE": "Nordeste",
-    "DF": "Centro-Oeste", "GO": "Centro-Oeste", "MS": "Centro-Oeste", "MT": "Centro-Oeste",
-    "ES": "Sudeste", "MG": "Sudeste", "RJ": "Sudeste", "SP": "Sudeste",
-    "PR": "Sul", "RS": "Sul", "SC": "Sul",
-}

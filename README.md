@@ -19,16 +19,14 @@ Kaggle ──extract──▶ data/raw ──transform + validate──▶ data/
 |---|---|---|
 | Bronze | `data/raw/` | CSV original, apenas as linhas de 2025 (valores sem alterações) |
 | Silver | `data/processed/` | `partidas.csv`: uma linha por partida, limpa e tipada |
-| Gold | `data/analytics/` | Tabelas agregadas para análise (classificação, mando, evolução, arrecadação…) |
-| Figuras | `figuras/` | Gráficos PNG para o texto do TCC |
+| Gold | `data/analytics/` | Tabelas agregadas para análise (classificação, mando, resumo) |
 | Export | `data/exports/` | Mesmas tabelas em CSV `;` / UTF-8 com BOM, para abrir no Excel |
 
 ## Estrutura
 
 ```
 ├── data/               # camadas de dados (processed/analytics/exports são geradas)
-├── figuras/            # gráficos gerados pelo pipeline
-├── docs/               # dicionário de dados e documentação das análises (analises.md)
+├── docs/               # dicionário de dados
 ├── notebooks/          # análises exploratórias (células # %% do VS Code)
 ├── src/
 │   ├── config.py       # caminhos e parâmetros
@@ -36,7 +34,6 @@ Kaggle ──extract──▶ data/raw ──transform + validate──▶ data/
 │   ├── transform.py    # limpeza e padronização
 │   ├── validate.py     # checagens de qualidade
 │   ├── analytics.py    # tabelas gold
-│   ├── figuras.py      # gráficos PNG
 │   ├── load.py         # gravação em disco
 │   └── pipeline.py     # orquestração
 ├── tests/              # testes automatizados (pytest)
@@ -80,8 +77,3 @@ geradas pelo pipeline: quem clonar o projeto recria tudo com `make pipeline`. Os
 
 - A classificação é recalculada a partir dos jogos e **não considera punições do STJD**.
   Por isso as posições podem divergir da tabela oficial.
-  Em 2025 não houve diferença: a classificação calculada bate com a oficial.
-- A coluna de técnico do dataset não é confiável (mesmo técnico em todas as rodadas em times
-  que trocaram de comando), por isso não há análise por técnico. Veja `docs/dicionario_dados.md`.
-- A única variável financeira é a arrecadação (bilheteria); ela não representa a receita
-  total nem o investimento dos clubes.

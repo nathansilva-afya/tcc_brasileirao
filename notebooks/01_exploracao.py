@@ -11,45 +11,26 @@ import pandas as pd
 from src import config
 from src.transform import ler_partidas
 
-
-def gold(nome: str) -> pd.DataFrame:
-    return pd.read_csv(config.ANALYTICS_DIR / f"{nome}.csv")
-
-
 partidas = ler_partidas(config.PARTIDAS)
+classificacao = pd.read_csv(config.ANALYTICS_DIR / "classificacao.csv")
+resumo = pd.read_csv(config.ANALYTICS_DIR / "resumo_temporada.csv")
+mando = pd.read_csv(config.ANALYTICS_DIR / "desempenho_mando.csv")
+
 partidas.info()
 
 # %% Resumo da temporada 2025
-gold("resumo_temporada").T
+resumo[["campeao", "pontos_campeao", "media_gols", "pct_vitoria_mandante"]]
 
 # %% Classificação final
-gold("classificacao")[["posicao", "time", "pontos", "vitorias", "empates", "derrotas", "saldo_gols", "aproveitamento"]]
+classificacao[["posicao", "time", "pontos", "vitorias", "empates", "derrotas", "saldo_gols", "aproveitamento"]]
 
-# %% Correlação de Spearman dos indicadores com os pontos
-gold("correlacoes")
+# %% Distribuição dos resultados por mando de campo
+resumo[["pct_vitoria_mandante", "pct_empate", "pct_vitoria_visitante"]].T.plot.bar(
+    title="Resultado por mando de campo (2025)", figsize=(8, 4), legend=False)
 
-# %% Vantagem de jogar em casa por time
-gold("diferenca_mando")
-
-# %% Resultados pela distância entre as sedes
-gold("mando_distancia")
-
-# %% 1º x 2º turno
-gold("desempenho_turno")
-
-# %% Arrecadação e eficiência
-gold("eficiencia_arrecadacao")
-
-# %% Resultados por quartil de arrecadação
-gold("arrecadacao_resultado")
-
-# %% Esquemas táticos
-gold("formacoes")
-
-# %% Placares mais frequentes
-gold("placares").head(10)
-
-# %% Faixa de horário
-gold("horario")
+# %% Aproveitamento em casa x fora por time
+(mando.set_index(["time", "mando"])["aproveitamento"]
+      .unstack().assign(diferenca=lambda d: d["casa"] - d["fora"])
+      .sort_values("diferenca", ascending=False).head(10))
 
 # %%
