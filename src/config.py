@@ -11,10 +11,17 @@ EXPORTS_DIR = DATA_DIR / "exports"      # cópias no formato do Excel pt-BR
 
 # Fonte (Kaggle)
 KAGGLE_DATASET = "adaoduque/campeonato-brasileiro-de-futebol"
-KAGGLE_FILE = "campeonato-brasileiro-full.csv"
+# nome da tabela -> arquivo do dataset (o bronze guarda com o mesmo nome do Kaggle)
+KAGGLE_FILES = {
+    "partidas": "campeonato-brasileiro-full.csv",
+    "gols": "campeonato-brasileiro-gols.csv",
+    "cartoes": "campeonato-brasileiro-cartoes.csv",
+    "estatisticas": "campeonato-brasileiro-estatisticas-full.csv",
+}
 
-RAW_PARTIDAS = RAW_DIR / "campeonato_brasileiro_de_futebol.csv"
-PARTIDAS = PROCESSED_DIR / "partidas.csv"
+RAW = {nome: RAW_DIR / arquivo for nome, arquivo in KAGGLE_FILES.items()}
+PROCESSED = {nome: PROCESSED_DIR / f"{nome}.csv" for nome in KAGGLE_FILES}
+PARTIDAS = PROCESSED["partidas"]
 
 TEMPORADA = 2025  # o projeto analisa apenas esta temporada
 

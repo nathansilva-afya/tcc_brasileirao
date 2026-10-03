@@ -55,3 +55,74 @@ def validar(df: pd.DataFrame) -> None:
                     TEMPORADA, len(df), times * (times - 1), times)
 
     log.info("Validação OK: %d partidas da temporada %d", len(df), TEMPORADA)
+
+
+def _clube_valido(df: pd.DataFrame, partidas: pd.DataFrame, nome: str, erros: list) -> None:
+    p = partidas.set_index("id_partida")
+    joga = (df["clube"] == df["id_partida"].map(p["mandante"])) | (df["clube"] == df["id_partida"].map(p["visitante"]))
+    if not joga.all():
+        erros.append(f"{nome}: {(~joga).sum()} linhas com clube que não jogou a partida")
+
+
+def validar_gols(gols: pd.DataFrame, partidas: pd.DataFrame) -> None:
+    erros = []
+    _clube_valido(gols, partidas, "gols", erros)
+    if gols["minuto"].isna().any():
+        erros.append(f"gols: {gols['minuto'].isna().sum()} minutos inválidos")
+
+    # Gols por clube devem bater com o placar (gol contra conta para o beneficiado)
+    contagem = gols.groupby(["id_partida", "clube"]).size()
+    p = partidas.set_index("id_partida")
+    casa = pd.Series(list(zip(p.index, p["mandante"]))).map(contagem).fillna(0).to_numpy()
+    fora = pd.Series(list(zip(p.index, p["visitante"]))).map(contagem).fillna(0).to_numpy()
+    divergentes = ((casa != p["gols_mandante"].to_numpy()) | (fora != p["gols_visitante"].to_numpy())).sum()
+    if divergentes:
+        erros.append(f"gols: {divergentes} partidas com gols registrados diferentes do placar")
+
+    if erros:
+        raise ErroQualidade("; ".join(erros))
+    log.info("Validação OK: %d gols", len(gols))
+
+
+def validar_cartoes(cartoes: pd.DataFrame, partidas: pd.DataFrame) -> None:
+    if cartoes.empty:
+        log.warning("Cartões: a fonte não tem cartões individuais da temporada %d. "
+                    "Use cartao_amarelo/cartao_vermelho da tabela de estatísticas.", TEMPORADA)
+        return
+    erros = []
+    _clube_valido(cartoes, partidas, "cartoes", erros)
+    if not cartoes["cartao"].isin(["Amarelo", "Vermelho"]).all():
+        erros.append("cartoes: tipo de cartão desconhecido")
+    if erros:
+        raise ErroQualidade("; ".join(erros))
+    log.info("Validação OK: %d cartões", len(cartoes))
+
+
+def validar_estatisticas(est: pd.DataFrame, partidas: pd.DataFrame) -> None:
+    erros = []
+    _clube_valido(est, partidas, "estatisticas", erros)
+    if est.duplicated(["id_partida", "clube"]).any():
+        erros.append("estatisticas: clube repetido na mesma partida")
+    if (est["chutes_no_alvo"] > est["chutes"]).any():
+        erros.append("estatisticas: chutes no alvo maior que chutes")
+    if not est["posse_de_bola"].dropna().between(0, 100).all():
+        erros.append("estatisticas: posse de bola fora de 0–100")
+    if erros:
+        raise ErroQualidade("; ".join(erros))
+
+    sem = set(partidas["id_partida"]) - set(est["id_partida"])
+    if sem:
+        log.warning("Estatísticas: %d partidas sem estatísticas", len(sem))
+    for col in ["posse_de_bola", "passes", "precisao_passes"]:
+        n = est[col].isna().sum()
+        if n:
+            log.warning("Estatísticas: %d valores ausentes em '%s'", n, col)
+    log.info("Validação OK: estatísticas de %d partidas", est["id_partida"].nunique())
+
+
+def validar_tudo(tabelas: dict) -> None:
+    partidas = tabelas["partidas"]
+    validar(partidas)
+    validar_gols(tabelas["gols"], partidas)
+    validar_cartoes(tabelas["cartoes"], partidas)
+    validar_estatisticas(tabelas["estatisticas"], partidas)

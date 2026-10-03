@@ -63,3 +63,64 @@ def test_classificacao(bruto):
     assert tab.loc["Santos", "posicao"] == 1
     assert tab.loc["Flamengo", "pontos"] == 3
     assert len(tabelas["partidas_por_time"]) == 2 * len(bruto)
+
+
+@pytest.fixture
+def partidas(bruto):
+    return transform.transformar(bruto)
+
+
+def test_minuto_com_acrescimo():
+    m = transform.separar_minuto(pd.Series(["31", "45+3", "90+12", "46"]))
+    assert m["minuto"].tolist() == [31, 45, 90, 46]
+    assert m["acrescimo"].tolist() == [0, 3, 12, 0]
+    assert m["tempo"].tolist() == [1, 1, 2, 2]
+
+
+def test_gols_validam_contra_placar(partidas):
+    gols_bruto = pd.DataFrame({
+        "partida_id": [1, 1, 2, 2, 3, 999],
+        "rodata": [1, 1, 1, 1, 38, 1],
+        "clube": ["Flamengo", "Flamengo", "Santos", "Palmeiras", "Santos", "Vasco"],
+        "atleta": ["Pedro", "Zagueiro do Vasco", "A", "B", "C", "fora da temporada"],
+        "minuto": ["10", "90+2", "5", "60", "45+1", "1"],
+        "tipo_de_gol": [None, "Gol Contra", "Penalty", None, None, None],
+    })
+    gols = transform.transformar_gols(gols_bruto, partidas)
+    assert len(gols) == 5                                    # partida 999 não é da temporada
+    assert gols.loc[gols["atleta"] == "C", "mando"].item() == "fora"
+    validate.validar_gols(gols, partidas)
+
+    art = analytics.artilharia(gols)
+    assert "Zagueiro do Vasco" not in set(art["atleta"])     # gol contra não entra na artilharia
+
+    with pytest.raises(validate.ErroQualidade):              # gol a menos -> não bate com o placar
+        validate.validar_gols(gols.iloc[1:], partidas)
+
+
+def test_estatisticas(partidas):
+    est_bruto = pd.DataFrame({
+        "partida_id": [1, 1],
+        "rodata": [1, 1],
+        "clube": ["Flamengo", "Vasco"],
+        "chutes": [10, 4], "chutes_no_alvo": [5, 1],
+        "posse_de_bola": ["64%", "36%"], "passes": [500, 0], "precisao_passes": ["90%", None],
+        "faltas": [10, 12], "cartao_amarelo": [1, 3], "cartao_vermelho": [0, 1],
+        "impedimentos": [2, 0], "escanteios": [6, 2],
+    })
+    est = transform.transformar_estatisticas(est_bruto, partidas)
+    assert est["posse_de_bola"].tolist() == [64, 36]
+    assert pd.isna(est.loc[est["clube"] == "Vasco", "passes"].item())   # 0 passes = erro da fonte
+    validate.validar_estatisticas(est, partidas)
+
+    tabelas = analytics.construir(partidas, estatisticas=est)
+    fla = tabelas["estatisticas_time"].set_index("time").loc["Flamengo"]
+    assert fla["conversao_chutes"] == 0.2                    # 2 gols em 10 chutes
+
+
+def test_cartoes_vazios_nao_quebram(partidas):
+    vazio = pd.DataFrame(columns=["partida_id", "rodata", "clube", "cartao", "atleta",
+                                  "num_camisa", "posicao", "minuto"])
+    cartoes = transform.transformar_cartoes(vazio, partidas)
+    validate.validar_cartoes(cartoes, partidas)
+    assert analytics.cartoes_por_atleta(cartoes).empty

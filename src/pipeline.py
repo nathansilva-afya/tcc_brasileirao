@@ -17,12 +17,13 @@ log = logging.getLogger("pipeline")
 def executar(forcar_download: bool = False) -> None:
     extract.extrair(forcar=forcar_download)
 
-    partidas = transform.transformar(transform.ler_bruto(config.RAW_PARTIDAS))
-    validate.validar(partidas)
-    load.salvar(partidas, config.PARTIDAS)
-    load.exportar_excel(partidas, "partidas")
+    tabelas = transform.transformar_tudo(config.RAW)
+    validate.validar_tudo(tabelas)
+    for nome, df in tabelas.items():
+        load.salvar(df, config.PROCESSED[nome])
+        load.exportar_excel(df, nome)
 
-    for nome, df in analytics.construir(partidas).items():
+    for nome, df in analytics.construir(**tabelas).items():
         load.salvar(df, config.ANALYTICS_DIR / f"{nome}.csv")
         load.exportar_excel(df, nome)
 

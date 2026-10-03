@@ -1,6 +1,8 @@
 """Camada analítica (gold): tabelas agregadas da temporada 2025, prontas para o TCC."""
 from __future__ import annotations
 
+from typing import Optional
+
 import pandas as pd
 
 from src.config import PONTOS_EMPATE, PONTOS_VITORIA
@@ -68,13 +70,101 @@ def resumo_temporada(partidas: pd.DataFrame, tabela: pd.DataFrame) -> pd.DataFra
     return r.round(4).reset_index()
 
 
-def construir(partidas: pd.DataFrame) -> dict:
+FAIXAS_MINUTO = [0, 15, 30, 45, 60, 75, 90]
+ROTULOS_FAIXA = ["0-15", "16-30", "31-45+", "46-60", "61-75", "76-90+"]
+
+
+def artilharia(gols: pd.DataFrame) -> pd.DataFrame:
+    """Gols por atleta (gols contra ficam de fora, pois contam para o adversário)."""
+    g = gols[gols["tipo_gol"] != "Gol contra"]
+    a = g.groupby(["atleta", "clube"], as_index=False).agg(
+        gols=("id_partida", "size"),
+        penaltis=("tipo_gol", lambda s: (s == "Pênalti").sum()),
+        jogos_com_gol=("id_partida", "nunique"),
+    )
+    a = a.sort_values(["gols", "penaltis", "atleta"], ascending=[False, True, True]).reset_index(drop=True)
+    a.insert(0, "posicao", a["gols"].rank(method="min", ascending=False).astype(int))
+    return a
+
+
+def gols_por_minuto(gols: pd.DataFrame) -> pd.DataFrame:
+    """Distribuição dos gols em faixas de 15 minutos (acréscimos entram na faixa final do tempo)."""
+    faixa = pd.cut(gols["minuto"].astype(float), FAIXAS_MINUTO, labels=ROTULOS_FAIXA, include_lowest=True)
+    t = (gols.assign(faixa=faixa)
+             .groupby("faixa", observed=False)
+             .agg(gols=("id_partida", "size"),
+                  penaltis=("tipo_gol", lambda s: (s == "Pênalti").sum()),
+                  gols_contra=("tipo_gol", lambda s: (s == "Gol contra").sum()))
+             .reset_index())
+    t["pct_gols"] = (t["gols"] / t["gols"].sum()).round(4)
+    t["faixa"] = t["faixa"].astype(str)
+    return t
+
+
+def estatisticas_partida_time(ppt: pd.DataFrame, est: pd.DataFrame) -> pd.DataFrame:
+    """Resultado de cada time em cada jogo junto com suas estatísticas (base para correlações)."""
+    colunas = ["id_partida", "clube", "chutes", "chutes_no_alvo", "posse_de_bola", "passes",
+               "precisao_passes", "faltas", "cartao_amarelo", "cartao_vermelho", "impedimentos", "escanteios"]
+    df = ppt.merge(est[colunas].rename(columns={"clube": "time"}), on=["id_partida", "time"], how="left")
+    df["conversao_chutes"] = (df["gols_pro"] / df["chutes"].where(df["chutes"] > 0)).astype(float).round(4)
+    return df
+
+
+def estatisticas_time(ept: pd.DataFrame) -> pd.DataFrame:
+    """Médias por jogo e totais de disciplina de cada time na temporada."""
+    t = ept.groupby(["temporada", "time"], as_index=False).agg(
+        jogos=("id_partida", "size"),
+        gols_pro=("gols_pro", "sum"),
+        chutes=("chutes", "sum"),
+        chutes_no_alvo=("chutes_no_alvo", "sum"),
+        media_chutes=("chutes", "mean"),
+        media_chutes_no_alvo=("chutes_no_alvo", "mean"),
+        media_posse=("posse_de_bola", "mean"),
+        media_passes=("passes", "mean"),
+        media_precisao_passes=("precisao_passes", "mean"),
+        media_escanteios=("escanteios", "mean"),
+        media_impedimentos=("impedimentos", "mean"),
+        faltas=("faltas", "sum"),
+        cartoes_amarelos=("cartao_amarelo", "sum"),
+        cartoes_vermelhos=("cartao_vermelho", "sum"),
+    )
+    t["pct_chutes_no_alvo"] = t["chutes_no_alvo"] / t["chutes"]
+    t["conversao_chutes"] = t["gols_pro"] / t["chutes"]
+    t["chutes_por_gol"] = t["chutes"] / t["gols_pro"].where(t["gols_pro"] > 0)
+    totais = ["jogos", "gols_pro", "chutes", "chutes_no_alvo", "faltas", "cartoes_amarelos", "cartoes_vermelhos"]
+    taxas = [c for c in t.columns if c not in totais + ["temporada", "time"]]
+    t[totais] = t[totais].astype(int)
+    t[taxas] = t[taxas].astype(float).round(4)
+    return t.sort_values("media_posse", ascending=False).reset_index(drop=True)
+
+
+def cartoes_por_atleta(cartoes: pd.DataFrame) -> pd.DataFrame:
+    """Cartões individuais por atleta (vazio quando a fonte não tem cartões da temporada)."""
+    return (cartoes.groupby(["atleta", "clube", "posicao"], as_index=False, dropna=False)
+                   .agg(amarelos=("cartao", lambda s: (s == "Amarelo").sum()),
+                        vermelhos=("cartao", lambda s: (s == "Vermelho").sum()))
+                   .sort_values(["vermelhos", "amarelos"], ascending=False)
+                   .reset_index(drop=True))
+
+
+def construir(partidas: pd.DataFrame, gols: Optional[pd.DataFrame] = None,
+              cartoes: Optional[pd.DataFrame] = None, estatisticas: Optional[pd.DataFrame] = None) -> dict:
     """Gera todas as tabelas gold. Retorna {nome_arquivo: DataFrame}."""
     ppt = partidas_por_time(partidas)
     tabela = classificacao(ppt)
-    return {
+    tabelas = {
         "partidas_por_time": ppt,
         "classificacao": tabela,
         "desempenho_mando": desempenho_mando(ppt),
         "resumo_temporada": resumo_temporada(partidas, tabela),
     }
+    if gols is not None:
+        tabelas["artilharia"] = artilharia(gols)
+        tabelas["gols_por_minuto"] = gols_por_minuto(gols)
+    if estatisticas is not None:
+        ept = estatisticas_partida_time(ppt, estatisticas)
+        tabelas["estatisticas_partida_time"] = ept
+        tabelas["estatisticas_time"] = estatisticas_time(ept)
+    if cartoes is not None:
+        tabelas["cartoes_por_atleta"] = cartoes_por_atleta(cartoes)
+    return tabelas
