@@ -2,9 +2,9 @@
 import pandas as pd
 import numpy as np
 
-df_posse_silver = pd.read_csv("/Workspace/Users/nathandeandrades@gmail.com/tcc_brasileirao/data/processed/posse_bola_silver.csv")
-df_bilheteria_silver = pd.read_csv("/Workspace/Users/nathandeandrades@gmail.com/tcc_brasileirao/data/processed/bilheteria_silver.csv")
-df_scout_silver = pd.read_csv("/Workspace/Users/nathandeandrades@gmail.com/tcc_brasileirao/data/processed/scout_silver.csv")
+df_posse_silver = pd.read_csv("/Workspace/tcc/tcc_brasileirao/data/processed/posse_bola_silver.csv")
+df_bilheteria_silver = pd.read_csv("/Workspace/tcc/tcc_brasileirao/data/processed/bilheteria_silver.csv")
+df_scout_silver = pd.read_csv("/Workspace/tcc/tcc_brasileirao/data/processed/scout_silver.csv")
 
 
 
@@ -20,7 +20,7 @@ df_arrecadacao_gold = df_arrecadacao_gold[df_arrecadacao_gold['qtd_jogos'] >= 3]
 df_arrecadacao_gold['media_arrecadacao'] = df_arrecadacao_gold['media_arrecadacao'].round(2)
 df_arrecadacao_gold['total_arrecadacao'] = df_arrecadacao_gold['total_arrecadacao'].round(2)
 
-df_arrecadacao_gold.to_csv("/Workspace/Users/nathandeandrades@gmail.com/tcc_brasileirao/data/analytics/bilheteria_gold.csv", index=False)
+df_arrecadacao_gold.to_csv("/Workspace/tcc/tcc_brasileirao/data/analytics/bilheteria_gold.csv", index=False)
 
 
 ##############################################################
@@ -43,7 +43,7 @@ df_artilharia_gold = pd.merge(
     on='clube'
 )
 
-df_artilharia_gold.to_csv("/Workspace/Users/nathandeandrades@gmail.com/tcc_brasileirao/data/analytics/scout_gold.csv", index=False)
+df_artilharia_gold.to_csv("/Workspace/tcc/tcc_brasileirao/data/analytics/scout_gold.csv", index=False)
 
 
 #######################################################################
@@ -60,5 +60,5 @@ df_conversao_gold['taxa_vitoria_pct'] = (df_conversao_gold['taxa_vitoria_pct'] *
 df_conversao_gold = df_conversao_gold.sort_values(by='posse_de_bola', ascending=True)
 df_conversao_gold = df_conversao_gold[df_conversao_gold['total_jogos'] >= 4]
 
-df_conversao_gold.to_csv("/Workspace/Users/nathandeandrades@gmail.com/tcc_brasileirao/data/analytics/posse_bola_gold.csv", index=False)
+df_conversao_gold.to_csv("/Workspace/tcc/tcc_brasileirao/data/analytics/posse_bola_gold.csv", index=False)
 
