@@ -66,6 +66,12 @@ Colunas: id_partida, rodada, clube, mando, adversario, atleta, num_camisa, posic
 | estatisticas_partida_time.csv | time × partida | colunas de `partidas_por_time` + estatísticas do jogo + conversao_chutes. Base para correlações (ex.: posse × resultado) |
 | estatisticas_time.csv | time | médias por jogo (chutes, posse, passes, precisão, escanteios, impedimentos), totais de faltas e cartões, pct_chutes_no_alvo, conversao_chutes, chutes_por_gol |
 | cartoes_por_atleta.csv | atleta × clube | amarelos, vermelhos (vazio em 2025) |
+| bilheteria.csv | dia da semana × horário | dia_da_semana (em inglês, ex.: Saturday), hora_oficial (arredondada a 15 min), qtd_jogos (com renda informada), media_arrecadacao, total_arrecadacao. Só combinações com 3+ jogos |
+| scout.csv | atleta × clube | gols_do_jogador, eficiencia_clube_pct (gols do clube ÷ chutes no alvo × 100). Gol contra conta para o clube beneficiado, com o atleta adversário |
+| posse_bola.csv | % de posse de bola | total_jogos, taxa_vitoria_pct (% de vitórias com aquela posse). Só valores com 4+ jogos |
 
 `aproveitamento` = pontos ÷ (jogos × 3). Critérios de desempate da classificação: pontos,
 vitórias, saldo de gols, gols pró.
+
+No Databricks (`make databricks`), cada arquivo vira a tabela Delta
+`workspace.brasileirao.<nome do arquivo sem .csv>`.

@@ -1,4 +1,5 @@
 """Caminhos e parâmetros centrais do projeto."""
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,3 +28,10 @@ TEMPORADA = 2025  # o projeto analisa apenas esta temporada
 
 PONTOS_VITORIA = 3
 PONTOS_EMPATE = 1
+
+# Databricks (python -m src.publish): onde as tabelas gold são criadas no Unity Catalog.
+# "workspace" é o catálogo padrão do Databricks Free Edition. Sem DATABRICKS_WAREHOUSE_ID,
+# usa o primeiro SQL warehouse do workspace.
+DATABRICKS_CATALOG = os.environ.get("DATABRICKS_CATALOG", "workspace")
+DATABRICKS_SCHEMA = os.environ.get("DATABRICKS_SCHEMA", "brasileirao")
+DATABRICKS_WAREHOUSE_ID = os.environ.get("DATABRICKS_WAREHOUSE_ID")

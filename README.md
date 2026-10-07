@@ -31,6 +31,7 @@ Kaggle ──extract──▶ data/raw ──transform + validate──▶ data/
 | Bronze | `data/raw/` | Os 4 CSVs do Kaggle, apenas as linhas de 2025 (valores sem alterações) |
 | Silver | `data/processed/` | `partidas`, `gols`, `cartoes` e `estatisticas`: limpos e tipados |
 | Gold | `data/analytics/` | Tabelas agregadas para análise (classificação, mando, artilharia, estatísticas…) |
+| Databricks | `workspace.brasileirao` | As tabelas gold como tabelas Delta no Unity Catalog (opcional, `make databricks`) |
 | Export | `data/exports/` | Mesmas tabelas em CSV `;` / UTF-8 com BOM, para abrir no Excel |
 
 ## Estrutura
@@ -46,6 +47,7 @@ Kaggle ──extract──▶ data/raw ──transform + validate──▶ data/
 │   ├── validate.py     # checagens de qualidade
 │   ├── analytics.py    # tabelas gold
 │   ├── load.py         # gravação em disco
+│   ├── publish.py      # tabelas gold no Databricks (Unity Catalog)
 │   └── pipeline.py     # orquestração
 ├── tests/              # testes automatizados (pytest)
 ├── Makefile
@@ -68,6 +70,31 @@ Sem `make`: `.venv/bin/python -m src.pipeline`. Para baixar o dataset de novo do
 `make download`.
 
 No VS Code, selecione o interpretador `.venv/bin/python` (Python: Select Interpreter).
+
+### Publicar no Databricks (Free Edition)
+
+`make databricks` roda o pipeline e cria (ou recria) cada tabela gold como tabela Delta em
+`workspace.brasileirao`, usando o SQL warehouse serverless do workspace. Tudo roda da
+máquina local; não é preciso abrir notebook nem cluster.
+
+1. No Databricks: avatar > **Settings** > **Developer** > **Access tokens** > *Generate new token*.
+2. Crie `~/.databrickscfg` (fora do repositório, o token não vai para o git):
+
+   ```ini
+   [DEFAULT]
+   host  = https://<seu-workspace>.cloud.databricks.com
+   token = dapi...
+   ```
+
+3. `make install` (instala o `databricks-sdk`) e `make databricks`.
+
+Para publicar o que já está em `data/analytics` sem rodar o pipeline: `.venv/bin/python -m src.publish`.
+Catálogo, schema e warehouse podem ser trocados com as variáveis `DATABRICKS_CATALOG`,
+`DATABRICKS_SCHEMA` e `DATABRICKS_WAREHOUSE_ID` (padrão: `workspace`, `brasileirao` e o
+primeiro warehouse do workspace).
+
+As tabelas `bilheteria`, `scout` e `posse_bola` são as que os notebooks `01_limpeza` e
+`02_limpeza` geravam no Databricks; a lógica agora está em `src/analytics.py`.
 
 ### Versionamento (git)
 

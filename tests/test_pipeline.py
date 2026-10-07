@@ -124,3 +124,47 @@ def test_cartoes_vazios_nao_quebram(partidas):
     cartoes = transform.transformar_cartoes(vazio, partidas)
     validate.validar_cartoes(cartoes, partidas)
     assert analytics.cartoes_por_atleta(cartoes).empty
+
+
+def test_tabelas_dos_notebooks(partidas):
+    est = transform.transformar_estatisticas(pd.DataFrame({
+        "partida_id": [1, 1, 2, 2, 3, 3], "rodata": [1, 1, 1, 1, 38, 38],
+        "clube": ["Flamengo", "Vasco", "Santos", "Palmeiras", "Flamengo", "Santos"],
+        "chutes": [10, 4, 5, 5, 6, 8], "chutes_no_alvo": [4, 1, 2, 2, 3, 4],
+        "posse_de_bola": ["60%", "40%", "50%", "50%", "60%", "40%"], "passes": [500] * 6,
+        "precisao_passes": ["90%"] * 6, "faltas": [10] * 6, "cartao_amarelo": [1] * 6,
+        "cartao_vermelho": [0] * 6, "impedimentos": [0] * 6, "escanteios": [3] * 6,
+    }), partidas)
+    gols = transform.transformar_gols(pd.DataFrame({
+        "partida_id": [1, 1, 2, 2, 3], "rodata": [1, 1, 1, 1, 38],
+        "clube": ["Flamengo", "Flamengo", "Santos", "Palmeiras", "Santos"],
+        "atleta": ["Pedro", "Pedro", "A", "B", "C"], "minuto": ["10", "20", "5", "60", "45"],
+        "tipo_de_gol": [None] * 5,
+    }), partidas)
+    tabelas = analytics.construir(partidas, gols=gols, estatisticas=est)
+
+    scout = tabelas["scout"].set_index("atleta")
+    assert scout.loc["Pedro", "gols_do_jogador"] == 2
+    assert scout.loc["Pedro", "eficiencia_clube_pct"] == 28.57    # 2 gols em 7 chutes no alvo
+
+    # posse 60%: Flamengo venceu o jogo 1 e perdeu o 3 -> 50%; abaixo de 4 jogos sai
+    assert analytics.posse_bola(partidas, est, minimo_jogos=1).set_index("posse_de_bola") \
+        .loc[60, "taxa_vitoria_pct"] == 50
+    assert tabelas["posse_bola"].empty
+
+    bil = analytics.bilheteria(partidas, minimo_jogos=1)
+    assert bil[["dia_da_semana", "hora_oficial", "qtd_jogos"]].values.tolist() == [["Saturday", "16:00", 1]]
+
+
+def test_sql_do_databricks():
+    from src import publish
+    df = pd.DataFrame({
+        "time": ["Grêmio", "Vasco D'Gama", None],
+        "pontos": pd.array([1, 2, None], dtype="Int64"),
+        "media": [0.5, float("nan"), 1e-05],
+        "data": pd.to_datetime(["2025-03-29", "2025-12-07", None]),
+    })
+    criar, inserir = publish.comandos_sql(df, "t")
+    assert criar == "CREATE OR REPLACE TABLE t (`time` STRING, `pontos` BIGINT, `media` DOUBLE, `data` DATE)"
+    assert "('Vasco D\\'Gama', 2, NULL, DATE'2025-12-07')" in inserir
+    assert "(NULL, NULL, 1e-05, NULL)" in inserir
