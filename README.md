@@ -6,14 +6,14 @@ Pipeline de engenharia de dados para análise do Campeonato Brasileiro Série A 
 
 ## Fontes
 
-O dataset do Kaggle tem 4 arquivos e o pipeline baixa todos:
+O dataset do Kaggle tem 4 arquivos; o pipeline usa só os 3 que os notebooks `01_limpeza` e
+`02_limpeza` leem (o de cartões fica de fora):
 
 | Arquivo (raw) | Tabela (processed) | Conteúdo | Dados de 2025 |
 |---|---|---|---|
 | `campeonato-brasileiro-full.csv` | `partidas` | uma linha por jogo: placar, estádio, técnicos, formações | 380 jogos |
 | `campeonato-brasileiro-gols.csv` | `gols` | um gol por linha: atleta, clube, minuto, tipo | 959 gols |
 | `campeonato-brasileiro-estatisticas-full.csv` | `estatisticas` | por time e por jogo: chutes, posse, passes, faltas, cartões, escanteios | 380 jogos (760 linhas) |
-| `campeonato-brasileiro-cartoes.csv` | `cartoes` | um cartão por linha: atleta, posição, minuto | **nenhum** (a fonte vai só até 2024) |
 
 ## Arquitetura
 
@@ -28,9 +28,9 @@ Kaggle ──extract──▶ data/raw ──transform + validate──▶ data/
 
 | Camada | Pasta | Conteúdo |
 |---|---|---|
-| Bronze | `data/raw/` | Os 4 CSVs do Kaggle, apenas as linhas de 2025 (valores sem alterações) |
-| Silver | `data/processed/` | `partidas`, `gols`, `cartoes` e `estatisticas`: limpos e tipados |
-| Gold | `data/analytics/` | Tabelas agregadas para análise (classificação, mando, artilharia, estatísticas…) |
+| Bronze | `data/raw/` | Os 3 CSVs do Kaggle, apenas as linhas de 2025 (valores sem alterações) |
+| Silver | `data/processed/` | `partidas`, `gols` e `estatisticas`: limpos e tipados |
+| Gold | `data/analytics/` | Só as tabelas geradas pelos notebooks: `bilheteria`, `scout` e `posse_bola` |
 | Databricks | `workspace.brasileirao` | As tabelas gold como tabelas Delta no Unity Catalog (opcional, `make databricks`) |
 | Export | `data/exports/` | Mesmas tabelas em CSV `;` / UTF-8 com BOM, para abrir no Excel |
 
@@ -94,7 +94,8 @@ Catálogo, schema e warehouse podem ser trocados com as variáveis `DATABRICKS_C
 primeiro warehouse do workspace).
 
 As tabelas `bilheteria`, `scout` e `posse_bola` são as que os notebooks `01_limpeza` e
-`02_limpeza` geravam no Databricks; a lógica agora está em `src/analytics.py`.
+`02_limpeza` geravam no Databricks; a lógica agora está em `src/analytics.py` e a lista
+fica em `TABELAS_GOLD` (`src/config.py`). Só essas tabelas são publicadas.
 
 ### Versionamento (git)
 
@@ -113,7 +114,7 @@ geradas pelo pipeline: quem clonar o projeto recria tudo com `make pipeline`. Os
 - Colunas derivadas: `resultado` (M/E/V) e `total_gols`. Quando há empate, `vencedor` fica nulo.
 - Validações das partidas: `id` único, colunas obrigatórias sem nulos, placares não
   negativos, `vencedor` coerente com o placar e UF válida.
-- Gols, cartões e estatísticas são filtrados pelos IDs das partidas de 2025 e ganham as
+- Gols e estatísticas são filtrados pelos IDs das partidas de 2025 e ganham as
   colunas `mando` (casa/fora) e `adversario`.
 - Minutos como `90+4` são separados em `minuto` (90), `acrescimo` (4) e `tempo` (1º/2º).
 - Gols: `Penalty`/`Gol Contra` viram `Pênalti`/`Gol contra` (os demais, `Normal`). Em gol
@@ -123,11 +124,4 @@ geradas pelo pipeline: quem clonar o projeto recria tudo com `make pipeline`. Os
 
 ## Limitações conhecidas
 
-- A classificação é recalculada a partir dos jogos e **não considera punições do STJD**.
-  Por isso as posições podem divergir da tabela oficial.
-- **Não há cartões individuais de 2025** na fonte (o arquivo de cartões termina em 2024).
-  O pipeline baixa e processa o arquivo mesmo assim, mas `cartoes` e `cartoes_por_atleta`
-  ficam vazios. Para disciplina, use `cartao_amarelo`/`cartao_vermelho` de `estatisticas`
-  (totais por time e por jogo). Se o autor do dataset publicar 2025, basta rodar
-  `make download`.
 - Estatísticas com valores ausentes: 12 de posse de bola, 8 de precisão de passe e 7 de passes.

@@ -110,16 +110,12 @@ def publicar(tabelas: dict, catalogo: str = config.DATABRICKS_CATALOG,
 
 
 def ler_analytics() -> dict:
-    """Lê as tabelas gold já geradas em data/analytics."""
-    tabelas = {}
-    for caminho in sorted(config.ANALYTICS_DIR.glob("*.csv")):
-        df = pd.read_csv(caminho)
-        if "data" in df.columns:
-            df["data"] = pd.to_datetime(df["data"])
-        tabelas[caminho.stem] = df
-    if not tabelas:
-        raise FileNotFoundError("data/analytics está vazio: rode `python -m src.pipeline` antes")
-    return tabelas
+    """Lê as tabelas gold (config.TABELAS_GOLD) já geradas em data/analytics."""
+    caminhos = {nome: config.ANALYTICS_DIR / f"{nome}.csv" for nome in config.TABELAS_GOLD}
+    faltando = [c.name for c in caminhos.values() if not c.exists()]
+    if faltando:
+        raise FileNotFoundError(f"Faltam {', '.join(faltando)} em data/analytics: rode `python -m src.pipeline` antes")
+    return {nome: pd.read_csv(caminho) for nome, caminho in caminhos.items()}
 
 
 def main() -> None:

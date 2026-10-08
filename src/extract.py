@@ -1,4 +1,4 @@
-"""Extração: baixa os 4 CSVs do dataset do Kaggle para data/raw."""
+"""Extração: baixa os CSVs do dataset do Kaggle para data/raw."""
 from __future__ import annotations
 
 import logging
@@ -17,7 +17,7 @@ def _ler_fonte(caminho: Path) -> pd.DataFrame:
 
 
 def filtrar_temporada(tabelas: dict) -> dict:
-    """Mantém só os jogos de config.TEMPORADA. Gols, cartões e estatísticas são
+    """Mantém só os jogos de config.TEMPORADA. Gols e estatísticas são
     filtrados pelos IDs das partidas da temporada."""
     partidas = tabelas["partidas"]
     partidas = partidas[partidas["data"].str.endswith(f"/{config.TEMPORADA}")]
@@ -30,7 +30,7 @@ def filtrar_temporada(tabelas: dict) -> dict:
 
 
 def extrair(forcar: bool = False) -> None:
-    """Baixa o dataset e grava os 4 arquivos (só a temporada configurada) em data/raw.
+    """Baixa o dataset e grava os arquivos (só a temporada configurada) em data/raw.
     Se todos já existem, não baixa de novo (a menos que forcar=True)."""
     if all(p.exists() for p in config.RAW.values()) and not forcar:
         log.info("Brutos já existem em %s (use --forcar-download para baixar de novo)",

@@ -56,15 +56,6 @@ def test_validacao_detecta_vencedor_incoerente(bruto):
         validate.validar(transform.transformar(bruto))
 
 
-def test_classificacao(bruto):
-    tabelas = analytics.construir(transform.transformar(bruto))
-    tab = tabelas["classificacao"].set_index("time")
-    assert tab.loc["Santos", "pontos"] == 4      # empate + vitória fora
-    assert tab.loc["Santos", "posicao"] == 1
-    assert tab.loc["Flamengo", "pontos"] == 3
-    assert len(tabelas["partidas_por_time"]) == 2 * len(bruto)
-
-
 @pytest.fixture
 def partidas(bruto):
     return transform.transformar(bruto)
@@ -91,9 +82,6 @@ def test_gols_validam_contra_placar(partidas):
     assert gols.loc[gols["atleta"] == "C", "mando"].item() == "fora"
     validate.validar_gols(gols, partidas)
 
-    art = analytics.artilharia(gols)
-    assert "Zagueiro do Vasco" not in set(art["atleta"])     # gol contra não entra na artilharia
-
     with pytest.raises(validate.ErroQualidade):              # gol a menos -> não bate com o placar
         validate.validar_gols(gols.iloc[1:], partidas)
 
@@ -113,18 +101,6 @@ def test_estatisticas(partidas):
     assert pd.isna(est.loc[est["clube"] == "Vasco", "passes"].item())   # 0 passes = erro da fonte
     validate.validar_estatisticas(est, partidas)
 
-    tabelas = analytics.construir(partidas, estatisticas=est)
-    fla = tabelas["estatisticas_time"].set_index("time").loc["Flamengo"]
-    assert fla["conversao_chutes"] == 0.2                    # 2 gols em 10 chutes
-
-
-def test_cartoes_vazios_nao_quebram(partidas):
-    vazio = pd.DataFrame(columns=["partida_id", "rodata", "clube", "cartao", "atleta",
-                                  "num_camisa", "posicao", "minuto"])
-    cartoes = transform.transformar_cartoes(vazio, partidas)
-    validate.validar_cartoes(cartoes, partidas)
-    assert analytics.cartoes_por_atleta(cartoes).empty
-
 
 def test_tabelas_dos_notebooks(partidas):
     est = transform.transformar_estatisticas(pd.DataFrame({
@@ -142,6 +118,7 @@ def test_tabelas_dos_notebooks(partidas):
         "tipo_de_gol": [None] * 5,
     }), partidas)
     tabelas = analytics.construir(partidas, gols=gols, estatisticas=est)
+    assert list(tabelas) == ["bilheteria", "scout", "posse_bola"]
 
     scout = tabelas["scout"].set_index("atleta")
     assert scout.loc["Pedro", "gols_do_jogador"] == 2

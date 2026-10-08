@@ -1,4 +1,4 @@
-"""Transformação: brutos (raw) -> partidas, gols, cartões e estatísticas limpos (processed)."""
+"""Transformação: brutos (raw) -> partidas, gols e estatísticas limpos (processed)."""
 from __future__ import annotations
 
 import pandas as pd
@@ -105,18 +105,6 @@ def transformar_gols(bruto: pd.DataFrame, partidas: pd.DataFrame) -> pd.DataFram
     return df[ordem].sort_values(["rodada", "id_partida", "tempo", "minuto", "acrescimo"]).reset_index(drop=True)
 
 
-def transformar_cartoes(bruto: pd.DataFrame, partidas: pd.DataFrame) -> pd.DataFrame:
-    """Um cartão por linha."""
-    df = limpar_texto(bruto.rename(columns={"partida_id": "id_partida", "rodata": "rodada"}))
-    df = _contexto_partida(df, partidas)
-    df = pd.concat([df.drop(columns="minuto"), separar_minuto(df["minuto"])], axis=1)
-    df["posicao"] = df["posicao"].replace({"Zagueira": "Zagueiro"})
-    df["num_camisa"] = pd.to_numeric(df["num_camisa"]).astype("Int64")
-    ordem = ["id_partida", "rodada", "clube", "mando", "adversario", "atleta", "num_camisa",
-             "posicao", "cartao", "minuto", "acrescimo", "tempo"]
-    return df[ordem].sort_values(["rodada", "id_partida", "tempo", "minuto", "acrescimo"]).reset_index(drop=True)
-
-
 def transformar_estatisticas(bruto: pd.DataFrame, partidas: pd.DataFrame) -> pd.DataFrame:
     """Estatísticas de cada time em cada partida (2 linhas por jogo).
     Percentuais viram número (0–100). Passes = 0 é erro da fonte e vira nulo."""
@@ -137,17 +125,16 @@ def transformar_estatisticas(bruto: pd.DataFrame, partidas: pd.DataFrame) -> pd.
 
 def _ler_evento(caminho) -> pd.DataFrame:
     # Os IDs são numéricos; o resto fica como texto para a limpeza tratar
-    return pd.read_csv(caminho, encoding="utf-8", dtype={"minuto": str, "num_camisa": str,
-                                                         "posse_de_bola": str, "precisao_passes": str})
+    return pd.read_csv(caminho, encoding="utf-8", dtype={"minuto": str, "posse_de_bola": str,
+                                                         "precisao_passes": str})
 
 
 def transformar_tudo(caminhos: dict) -> dict:
-    """Lê os 4 brutos e devolve {nome: DataFrame} da camada processed."""
+    """Lê os brutos e devolve {nome: DataFrame} da camada processed."""
     partidas = transformar(ler_bruto(caminhos["partidas"]))
     return {
         "partidas": partidas,
         "gols": transformar_gols(_ler_evento(caminhos["gols"]), partidas),
-        "cartoes": transformar_cartoes(_ler_evento(caminhos["cartoes"]), partidas),
         "estatisticas": transformar_estatisticas(_ler_evento(caminhos["estatisticas"]), partidas),
     }
 

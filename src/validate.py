@@ -84,20 +84,6 @@ def validar_gols(gols: pd.DataFrame, partidas: pd.DataFrame) -> None:
     log.info("Validação OK: %d gols", len(gols))
 
 
-def validar_cartoes(cartoes: pd.DataFrame, partidas: pd.DataFrame) -> None:
-    if cartoes.empty:
-        log.warning("Cartões: a fonte não tem cartões individuais da temporada %d. "
-                    "Use cartao_amarelo/cartao_vermelho da tabela de estatísticas.", TEMPORADA)
-        return
-    erros = []
-    _clube_valido(cartoes, partidas, "cartoes", erros)
-    if not cartoes["cartao"].isin(["Amarelo", "Vermelho"]).all():
-        erros.append("cartoes: tipo de cartão desconhecido")
-    if erros:
-        raise ErroQualidade("; ".join(erros))
-    log.info("Validação OK: %d cartões", len(cartoes))
-
-
 def validar_estatisticas(est: pd.DataFrame, partidas: pd.DataFrame) -> None:
     erros = []
     _clube_valido(est, partidas, "estatisticas", erros)
@@ -124,5 +110,4 @@ def validar_tudo(tabelas: dict) -> None:
     partidas = tabelas["partidas"]
     validar(partidas)
     validar_gols(tabelas["gols"], partidas)
-    validar_cartoes(tabelas["cartoes"], partidas)
     validar_estatisticas(tabelas["estatisticas"], partidas)
