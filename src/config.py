@@ -10,13 +10,12 @@ PROCESSED_DIR = DATA_DIR / "processed"  # camada silver: dados limpos e tipados
 ANALYTICS_DIR = DATA_DIR / "analytics"  # camada gold: tabelas agregadas para análise
 EXPORTS_DIR = DATA_DIR / "exports"      # cópias no formato do Excel pt-BR
 
-# Fonte (Kaggle)
+# Fonte (Kaggle): só os arquivos que os notebooks 01_limpeza e 02_limpeza usam
 KAGGLE_DATASET = "adaoduque/campeonato-brasileiro-de-futebol"
 # nome da tabela -> arquivo do dataset (o bronze guarda com o mesmo nome do Kaggle)
 KAGGLE_FILES = {
     "partidas": "campeonato-brasileiro-full.csv",
     "gols": "campeonato-brasileiro-gols.csv",
-    "cartoes": "campeonato-brasileiro-cartoes.csv",
     "estatisticas": "campeonato-brasileiro-estatisticas-full.csv",
 }
 
@@ -26,8 +25,8 @@ PARTIDAS = PROCESSED["partidas"]
 
 TEMPORADA = 2025  # o projeto analisa apenas esta temporada
 
-PONTOS_VITORIA = 3
-PONTOS_EMPATE = 1
+# Tabelas gold: as geradas pelos notebooks (src/analytics.py)
+TABELAS_GOLD = ["bilheteria", "scout", "posse_bola"]
 
 # Databricks (python -m src.publish): onde as tabelas gold são criadas no Unity Catalog.
 # "workspace" é o catálogo padrão do Databricks Free Edition. Sem DATABRICKS_WAREHOUSE_ID,
