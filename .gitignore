@@ -10,3 +10,6 @@ data/processed/*
 data/analytics/*
 data/exports/*
 !data/**/.gitkeep
+
+# Configurações locais do editor
+.vscode/
